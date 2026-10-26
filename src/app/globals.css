@@ -1,26 +1,70 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+/* ---------- Tailwind theme ---------- */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* ITFY palette — navy ink plus Ghana's kente colours */
+  --color-ink: #10204a;       /* text, primary buttons, dark bands */
+  --color-ink-soft: #1d3270;  /* hover for ink */
+  --color-paper: #f5f7fb;     /* page background */
+  --color-line: #dde3ee;      /* borders and dividers */
+  --color-gold: #f2b705;      /* donate, highlights */
+  --color-gold-soft: #ffc929; /* hover for gold */
+  --color-kente-green: #0e7c4a;
+  --color-kente-red: #c8102e;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* kept so any older code using these still works */
+  --color-background: var(--color-paper);
+  --color-foreground: var(--color-ink);
+
+  /* Poppins everywhere */
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+
+  /* stats ticker */
+  --animate-marquee: marquee 40s linear infinite;
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  /* kente squares weaving in on page load */
+  --animate-weave: weave-in 600ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  @keyframes weave-in {
+    from { opacity: 0; transform: scale(0.2) rotate(-12deg); }
+    to   { opacity: 1; transform: scale(1) rotate(0deg); }
   }
 }
 
+/* ---------- Global base styles ---------- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem; /* anchor links clear the sticky navbar */
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
