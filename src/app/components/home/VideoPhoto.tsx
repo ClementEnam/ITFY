@@ -3,7 +3,16 @@
 import Image from "next/image";
 import { useState } from "react";
 
-// A photo that turns into a YouTube player when a video ID is set and the play button is pressed.
+// Accepts any YouTube link (watch, youtu.be, shorts, embed, live) or a bare video ID.
+function toYouTubeId(input?: string) {
+  if (!input) return "";
+  const s = input.trim();
+  if (/^[\w-]{11}$/.test(s)) return s;
+  const m = s.match(/(?:youtu\.be\/|[?&]v=|\/(?:embed|shorts|live)\/)([\w-]{11})/);
+  return m ? m[1] : "";
+}
+
+// A photo that turns into a YouTube player when a video is set and the play button is pressed.
 // The video only loads after the click, so the page stays fast.
 export default function VideoPhoto({
   image,
@@ -15,6 +24,7 @@ export default function VideoPhoto({
   title: string;
 }) {
   const [playing, setPlaying] = useState(false);
+  youtubeId = toYouTubeId(youtubeId);
 
   return (
     <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] bg-ink shadow-[0_40px_80px_-40px_rgba(16,32,74,0.55)]">

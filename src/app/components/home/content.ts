@@ -20,7 +20,7 @@ export const WHY = {
   action: { label: "Discover training pathways", href: "/apply" },
   image: { src: IMG.coding, alt: "Young learners working at computers in an ITFY class" },
   // Optional: a YouTube video ID (the part after watch?v=). With one, the photo gets a play button.
-  youtubeId: "",
+  youtubeId: "https://youtu.be/20kVHaxoPYc?si=pZd7UBw8JktYx5FA",
 };
 
 export const CHALLENGE = {

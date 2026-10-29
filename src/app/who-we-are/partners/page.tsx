@@ -4,8 +4,8 @@ import Link from "next/link";
 import { container, h2, sectionSpace, SectionLabel } from "../../components/home/ui";
 import { EXPLORE, HERO, NETWORK, PARTNERS, VALUE } from "../../components/partners/content";
 import PartnerTile from "../../components/partners/PartnerTile";
-import ExploreBand from "../../components/shared/ExploreBand";
-import NumbersBand from "../../components/shared/NumbersBand";
+// import ExploreBand from "../../components/shared/ExploreBand";
+// import NumbersBand from "../../components/shared/NumbersBand";
 import { NUMBERS } from "../../components/team/content";
 import Reveal from "../../components/who-we-are/Reveal";
 
