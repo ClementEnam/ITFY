@@ -19,8 +19,8 @@ export default function Ecosystem() {
             inView ? "scale-100 opacity-100" : "scale-90 opacity-0"
           } motion-reduce:transform-none motion-reduce:opacity-100`}
         >
-          <span className="grid h-14 w-14 place-items-center rounded-full bg-white/10">
-            <Image alt="Nav Photo" src="/logo/logo.png" height={40} width = {40}/>
+          <span className="grid h-14 w-14 place-items-center rounded-full bg-white p-2">
+            <Image height={90} width={90} alt="" src="/logo/logo.png" className="h-full w-full object-contain" />
           </span>
           <span className="text-lg font-bold">{ECOSYSTEM.center}</span>
         </div>

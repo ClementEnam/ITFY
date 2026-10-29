@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState, type KeyboardEvent } from "react";
-import KenteWeave from "./Kenteweave";
 
 type Audience = {
   id: string;
@@ -158,8 +157,8 @@ export default function Hero() {
 
         {/* ---------- Image side ---------- */}
         <div className="relative">
-          {/* the signature element: kente weave peeking out behind the photo */}
-          <KenteWeave cols={12} rows={12} animate className="absolute bottom-0 left-0 w-[58%]" />
+          {/* offset gold block peeking out behind the photo */}
+          <div aria-hidden="true" className="absolute bottom-0 left-0 h-[62%] w-[58%] animate-hero-rise rounded-[2rem] bg-gold motion-reduce:animate-none" />
 
           <div className="relative mb-[11%] ml-[11%] aspect-[4/3] overflow-hidden rounded-[2rem] bg-ink/10 shadow-[0_40px_80px_-40px_rgba(16,32,74,0.55)]">
             {AUDIENCES.map((a, i) => (

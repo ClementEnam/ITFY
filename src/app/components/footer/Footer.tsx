@@ -1,7 +1,6 @@
 import { cacheLife } from "next/cache";
 import Link from "next/link";
 import Image from "next/image";
-import KenteWeave from "../Kenteweave";
 import BackToTop from "./BackToTop";
 import NewsletterForm from "./NewsletterForm";
 import SocialIcon from "./SocialIcon";
@@ -21,8 +20,6 @@ async function CurrentYear() {
 export default function Footer() {
   return (
     <footer className="mt-auto">
-      
-
       <div className="bg-ink text-white">
         {/* ---------- Newsletter ---------- */}
         <div className={`${container} grid gap-8 border-b border-white/10 py-14 lg:grid-cols-2 lg:items-center lg:gap-16 lg:py-16`}>
@@ -41,12 +38,13 @@ export default function Footer() {
         </div>
 
         {/* ---------- Brand + link columns ---------- */}
-        <div className={`${container} grid gap-14 py-14 lg:grid-cols-[1fr_2.4fr] lg:gap-16 lg:py-20`}>
+        <div className={`${container} grid gap-14 py-14 xl:grid-cols-[1fr_3fr] xl:gap-16 xl:py-20`}>
           {/* brand */}
           <div>
             <Link href="/" className="inline-flex items-center gap-3">
-              <span className="grid h-12 w-12 place-items-center rounded-2xl bg-white/10">
-                <Image alt="Nav Photo" src="/logo/logo.png" height={90} width = {90}/>
+              {/* white tile keeps the logo visible on the navy background */}
+              <span className="grid h-14 w-14 place-items-center rounded-2xl bg-white p-1.5">
+                <Image height={90} width={90} alt="" src="/logo/logo.png" className="h-full w-full object-contain" />
               </span>
               <span className="text-xl font-bold tracking-[-0.01em]">IT For Youth Ghana</span>
             </Link>
@@ -84,7 +82,7 @@ export default function Footer() {
           </div>
 
           {/* link columns */}
-          <nav aria-label="Footer" className="grid grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-4">
+          <nav aria-label="Footer" className="grid grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-3 xl:grid-cols-5">
             {FOOTER_COLUMNS.map((col) => (
               <div key={col.title}>
                 <h3 className="text-[15px] font-bold text-white">{col.title}</h3>

@@ -35,7 +35,7 @@ export default function SectionNav() {
   }, [active]);
 
   return (
-    <nav aria-label="On this page" className="sticky top-20 z-40 border-y border-line bg-paper/90 backdrop-blur-md">
+    <nav aria-label="On this page" className="sticky top-20 z-40 xl:top-32 border-y border-line bg-paper/90 backdrop-blur-md">
       <ul
         ref={listRef}
         className="mx-auto flex max-w-[1400px] gap-2 overflow-x-auto px-4 py-3 [scrollbar-width:none] sm:px-6 lg:px-8 [&::-webkit-scrollbar]:hidden"

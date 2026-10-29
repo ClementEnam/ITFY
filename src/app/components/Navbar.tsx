@@ -3,74 +3,96 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import KenteWeave from "./Kenteweave";
 import Image from "next/image";
-
 
 type NavChild = { label: string; href: string; description?: string };
 type NavItem = { label: string; href: string; children?: NavChild[] };
 
 // Edit labels/links here — desktop and mobile menus both read from this list.
+// Every link is unique, and matches the links used elsewhere on the site.
 export const NAV_ITEMS: NavItem[] = [
-  { label: "Home", href: "/" },
   {
     label: "Who we are",
     href: "/who-we-are",
     children: [
-      { label: "Our story", href: "/who-we-are", description: "Mission, vision and values" },
+      { label: "About us", href: "/who-we-are", description: "Mission, vision and values" },
       { label: "Our team", href: "/who-we-are/team", description: "The people behind ITFY" },
-      { label: "Partners", href: "/who-we-are/partners", description: "Who we work with" },
-      { label: "Careers", href: "/who-we-are/careers", description: "Work with us" },
+      { label: "Departments", href: "/who-we-are/departments", description: "How our work is organised" },
+      { label: "Our partners", href: "/who-we-are/partners", description: "Who we work with" },
+      { label: "Join our team", href: "/who-we-are/careers", description: "Open roles at ITFY" },
     ],
   },
   {
     label: "What we do",
     href: "/what-we-do",
     children: [
-      { label: "Programmes", href: "/what-we-do/programmes" },
-      { label: "Digital skills training", href: "/what-we-do/training" },
-      { label: "Community outreach", href: "/what-we-do/outreach" },
+      { label: "Girls in Tech", href: "/what-we-do/girls-in-tech" },
+      { label: "Youth Tech Academy", href: "/what-we-do/youth-tech-academy" },
+      { label: "Entrepreneurship Hub", href: "/what-we-do/entrepreneurship-hub" },
+      { label: "Code Impact Challenge", href: "/what-we-do/code-impact-challenge" },
+      { label: "Rural Tech Connect", href: "/what-we-do/rural-tech-connect" },
+      { label: "Community Outreach", href: "/what-we-do/community-outreach" },
+      { label: "Advocacy", href: "/what-we-do/advocacy" },
+      { label: "Tech Clubs", href: "/what-we-do/tech-clubs" },
+    ],
+  },
+  {
+    label: "Laptop Bank",
+    href: "/laptop-bank",
+    children: [
+      { label: "How it works", href: "/laptop-bank", description: "From donation to a learner's hands" },
+      { label: "What we accept", href: "/laptop-bank/what-we-accept", description: "Laptops and IT equipment we can use" },
+      { label: "Data security", href: "/laptop-bank/data-security", description: "How we wipe donated devices" },
+      { label: "Donate equipment", href: "/laptop-bank/donate", description: "Give a laptop a second life" },
     ],
   },
   {
     label: "Apply for training",
     href: "/apply",
     children: [
-      { label: "Available courses", href: "/apply/courses" },
       { label: "Who can apply", href: "/apply/eligibility" },
-      { label: "Questions about applying", href: "/apply/faqs" },
+      { label: "Browse courses", href: "/apply#courses" },
+      { label: "How it works", href: "/apply#how-to-apply" },
     ],
   },
   {
     label: "For organisations",
     href: "/for-organisations",
     children: [
+      { label: "Corporate training", href: "/for-organisations/corporate-training" },
+      { label: "Sponsorships", href: "/for-organisations/sponsorships" },
       { label: "Hire our graduates", href: "/for-organisations/hire" },
-      { label: "Corporate training", href: "/for-organisations/training" },
+      { label: "Staff volunteering", href: "/for-organisations/staff-volunteering" },
     ],
   },
   {
-    label: "Partner with us",
-    href: "/partner-with-us",
+    label: "Get involved",
+    href: "/get-involved",
     children: [
-      { label: "Sponsorship", href: "/partner-with-us/sponsorship" },
-      { label: "Volunteer", href: "/partner-with-us/volunteer" },
+      { label: "Her First Laptop", href: "/get-involved/her-first-laptop" },
+      { label: "Partner with us", href: "/partner-with-us" },
+      { label: "Educational institutions", href: "/get-involved/educational-institutions" },
+      { label: "Government", href: "/get-involved/government" },
+      { label: "NGOs & foundations", href: "/get-involved/ngos-and-foundations" },
+      { label: "International development", href: "/get-involved/international-development" },
+      { label: "Technology companies", href: "/get-involved/technology-companies" },
     ],
   },
   {
     label: "Our impact",
     href: "/our-impact",
     children: [
-      { label: "Success stories", href: "/our-impact/stories" },
-      { label: "Reports", href: "/our-impact/reports" },
+      { label: "Impact reports", href: "/our-impact/reports" },
+      { label: "Testimonials", href: "/our-impact/testimonials" },
+      { label: "UN SDGs", href: "/our-impact/sdgs" },
     ],
   },
   {
-    label: "News",
+    label: "News & updates",
     href: "/news",
     children: [
-      { label: "Latest news", href: "/news" },
-      { label: "Events", href: "/news/events" },
+      { label: "News", href: "/news" },
+      { label: "Blogs", href: "/news/blogs" },
     ],
   },
   { label: "Contact", href: "/contact" },
@@ -135,23 +157,61 @@ export default function Navbar() {
   }, [mobileOpen]);
 
   const linkBase =
-    "relative flex items-center gap-1 whitespace-nowrap rounded-full px-3 py-2 text-[15px] font-medium transition-colors";
+    "relative flex items-center gap-1 whitespace-nowrap rounded-full px-2.5 py-2 text-[14px] font-medium transition-colors 2xl:px-3 2xl:text-[15px]";
 
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-paper/85 text-ink backdrop-blur-md">
-      <div ref={navRef} className="mx-auto flex h-20 max-w-[1400px] items-center gap-3 px-4 sm:gap-6 sm:px-6 lg:px-8">
-        {/* Logo: small woven mark + name */}
+      <div ref={navRef}>
+      {/* Row 1: logo + actions */}
+      <div className="mx-auto flex h-20 max-w-[1400px] items-center gap-3 px-4 sm:gap-6 sm:px-6 lg:px-8">
+        {/* Logo + name */}
         <Link href="/" onClick={closeAll} className="flex shrink-0 items-center gap-3">
-          <Image alt="Nav Photo" src="/logo/logo.png" height={90} width = {90}/>
+          {/* alt is empty because the name is written right next to it */}
+          <Image height={90} width={90} alt="" src="/logo/logo.png" priority className="h-12 w-12 object-contain" />
           <span className="leading-tight">
             <span className="block text-[15px] font-bold tracking-[-0.01em] sm:text-[17px]">IT For Youth Ghana</span>
             <span className="hidden text-[13px] text-ink/55 sm:block">Digital skills &amp; opportunity</span>
           </span>
         </Link>
 
-        {/* Desktop menu */}
-        <nav aria-label="Main" className="ml-auto hidden 2xl:block">
-          <ul className="flex items-center gap-0.5">
+        {/* Actions */}
+        <div className="ml-auto flex shrink-0 items-center gap-2">
+          <Link
+            href="/apply"
+            onClick={closeAll}
+            className="hidden whitespace-nowrap rounded-full bg-ink px-5 py-2.5 text-[15px] font-semibold text-white transition-colors hover:bg-ink-soft sm:block"
+          >
+            Apply now
+          </Link>
+          <Link
+            href="/donate"
+            onClick={closeAll}
+            className="whitespace-nowrap rounded-full bg-gold px-4 py-2.5 text-[15px] font-semibold text-ink sm:px-5 transition-colors hover:bg-gold-soft"
+          >
+            Donate
+          </Link>
+          <button
+            type="button"
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-menu"
+            onClick={() => setMobileOpen((v) => !v)}
+            className="ml-1 grid h-11 w-11 place-items-center rounded-full border border-line bg-white xl:hidden"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-5 w-5">
+              {mobileOpen ? (
+                <path strokeLinecap="round" d="M6 6l12 12M18 6L6 18" />
+              ) : (
+                <path strokeLinecap="round" d="M4 8h16M4 16h16" />
+              )}
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      {/* Row 2: full menu (large screens) */}
+      <nav aria-label="Main" className="hidden border-t border-line xl:block">
+          <ul className="mx-auto flex h-12 max-w-[1400px] items-center gap-0.5 px-6 lg:px-5">
             {NAV_ITEMS.map((item) => {
               const active = isActive(item.href);
               const open = openMenu === item.label;
@@ -203,7 +263,7 @@ export default function Navbar() {
                   >
                     <ul className="w-72 rounded-2xl border border-line bg-white p-2 shadow-[0_24px_48px_-24px_rgba(16,32,74,0.35)]">
                       {item.children.map((child) => (
-                        <li key={child.href}>
+                        <li key={`${child.label}-${child.href}`}>
                           <Link
                             href={child.href}
                             onClick={closeAll}
@@ -224,39 +284,6 @@ export default function Navbar() {
           </ul>
         </nav>
 
-        {/* Actions */}
-        <div className="ml-auto flex shrink-0 items-center gap-2 2xl:ml-3">
-          <Link
-            href="/apply"
-            onClick={closeAll}
-            className="hidden whitespace-nowrap rounded-full bg-ink px-5 py-2.5 text-[15px] font-semibold text-white transition-colors hover:bg-ink-soft sm:block"
-          >
-            Apply now
-          </Link>
-          <Link
-            href="/donate"
-            onClick={closeAll}
-            className="whitespace-nowrap rounded-full bg-gold px-4 py-2.5 text-[15px] font-semibold text-ink sm:px-5 transition-colors hover:bg-gold-soft"
-          >
-            Donate
-          </Link>
-          <button
-            type="button"
-            aria-label={mobileOpen ? "Close menu" : "Open menu"}
-            aria-expanded={mobileOpen}
-            aria-controls="mobile-menu"
-            onClick={() => setMobileOpen((v) => !v)}
-            className="ml-1 grid h-11 w-11 place-items-center rounded-full border border-line bg-white 2xl:hidden"
-          >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-5 w-5">
-              {mobileOpen ? (
-                <path strokeLinecap="round" d="M6 6l12 12M18 6L6 18" />
-              ) : (
-                <path strokeLinecap="round" d="M4 8h16M4 16h16" />
-              )}
-            </svg>
-          </button>
-        </div>
       </div>
 
       {/* Mobile / tablet menu */}
@@ -264,7 +291,7 @@ export default function Navbar() {
         <nav
           id="mobile-menu"
           aria-label="Mobile"
-          className="h-[calc(100dvh-5rem)] overflow-y-auto border-t border-line bg-paper px-4 pb-10 pt-2 2xl:hidden"
+          className="h-[calc(100dvh-5rem)] overflow-y-auto border-t border-line bg-paper px-4 pb-10 pt-2 xl:hidden"
         >
           <ul className="mx-auto max-w-2xl divide-y divide-line">
             {NAV_ITEMS.map((item) => {
@@ -288,7 +315,7 @@ export default function Navbar() {
                       {expanded && (
                         <ul className="mb-4 space-y-1 border-l-[3px] border-gold pl-4">
                           {item.children.map((child) => (
-                            <li key={child.href}>
+                            <li key={`${child.label}-${child.href}`}>
                               <Link
                                 href={child.href}
                                 onClick={closeAll}

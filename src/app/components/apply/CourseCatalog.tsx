@@ -2,10 +2,13 @@
 
 import { useMemo, useState } from "react";
 import CourseCard from "./CourseCard";
-import { COURSES, type Level } from "./content";
+import { COURSES, LEVEL_LABEL, type Level } from "./content";
 
-const LEVELS: Level[] = ["beginner", "intermediate", "advanced"];
-const CATEGORIES = Array.from(new Set(COURSES.map((c) => c.category)));
+// only offer levels and categories that at least one course actually uses
+const LEVEL_ORDER: Level[] = ["beginner", "intermediate", "advanced", "all-levels"];
+// ("All levels" courses aren't an option: they already appear under every level)
+const LEVELS = LEVEL_ORDER.filter((l) => l !== "all-levels" && COURSES.some((c) => c.level === l));
+const CATEGORIES = Array.from(new Set(COURSES.map((c) => c.category))).sort();
 
 const field =
   "h-12 w-full rounded-full bg-white px-5 text-[15px] text-ink ring-1 ring-line transition-shadow focus:outline-none focus:ring-2 focus:ring-ink";
@@ -40,13 +43,14 @@ export default function CourseCatalog() {
   const [level, setLevel] = useState("all");
   const [price, setPrice] = useState("all");
 
+  // "All levels" courses suit everyone, so they show under any level filter
   const results = useMemo(() => {
     const q = query.trim().toLowerCase();
     return COURSES.filter(
       (c) =>
-        (!q || `${c.title} ${c.category} ${c.level}`.toLowerCase().includes(q)) &&
+        (!q || `${c.title} ${c.category} ${c.description} ${LEVEL_LABEL[c.level]}`.toLowerCase().includes(q)) &&
         (category === "all" || c.category === category) &&
-        (level === "all" || c.level === level) &&
+        (level === "all" || c.level === level || c.level === "all-levels") &&
         (price === "all" || (price === "free" ? c.price === 0 : c.price > 0))
     );
   }, [query, category, level, price]);
@@ -85,10 +89,10 @@ export default function CourseCatalog() {
           ))}
         </Select>
         <Select label="Level" value={level} onChange={setLevel}>
-          <option value="all">All levels</option>
+          <option value="all">Any level</option>
           {LEVELS.map((l) => (
             <option key={l} value={l}>
-              {l[0].toUpperCase() + l.slice(1)}
+              {LEVEL_LABEL[l]}
             </option>
           ))}
         </Select>

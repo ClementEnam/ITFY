@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import KenteWeave from "../components/Kenteweave";
 import CourseCatalog from "../components/apply/CourseCatalog";
 import StepsLine from "../components/apply/StepsLine";
 import Reveal from "../components/who-we-are/Reveal";
@@ -28,7 +27,7 @@ const h2 = "text-[clamp(2rem,4.2vw,3.5rem)] font-extrabold leading-[1.05] tracki
 function SectionLabel({ children }: { children: string }) {
   return (
     <div className="flex items-center gap-3 text-[15px] font-semibold text-ink/55">
-      <KenteWeave cols={2} rows={2} gapClassName="gap-[2px]" className="w-3.5" />
+      <span aria-hidden="true" className="h-[3px] w-6 rounded-full bg-gold" />
       {children}
     </div>
   );
@@ -65,6 +64,9 @@ export default function ApplyPage() {
             <p className="mt-7 max-w-[44ch] animate-hero-rise text-xl leading-relaxed text-ink/70 [animation-delay:150ms] motion-reduce:animate-none">
               {HERO.lead}
             </p>
+            <p className="mt-4 max-w-[52ch] animate-hero-rise text-[15px] leading-relaxed text-ink/60 [animation-delay:220ms] motion-reduce:animate-none">
+              {HERO.note}
+            </p>
             <div className="mt-10 flex animate-hero-rise flex-wrap gap-3 [animation-delay:300ms] motion-reduce:animate-none">
               <a href="#courses" className="rounded-full bg-ink px-7 py-3.5 text-[15px] font-semibold text-white transition-colors hover:bg-ink-soft">
                 Browse courses
@@ -76,7 +78,7 @@ export default function ApplyPage() {
           </div>
 
           <div className="relative">
-            <KenteWeave cols={10} rows={10} animate className="absolute bottom-0 left-0 w-[50%]" />
+            <div aria-hidden="true" className="absolute bottom-0 left-0 h-[62%] w-[50%] animate-hero-rise rounded-[2rem] bg-ink motion-reduce:animate-none" />
             <div className="relative mb-[9%] ml-[9%] aspect-[5/4] overflow-hidden rounded-[2rem] shadow-[0_40px_80px_-40px_rgba(16,32,74,0.55)]">
               <Image src={HERO.image.src} alt={HERO.image.alt} fill priority sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" />
             </div>

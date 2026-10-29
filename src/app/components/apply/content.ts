@@ -1,18 +1,28 @@
 // All text and data for the Apply for Training page.
 // Courses and cohorts are the parts that will come from Payload later.
 
-export type Level = "beginner" | "intermediate" | "advanced";
+export type Level = "beginner" | "intermediate" | "advanced" | "all-levels";
+export type Delivery = "In-person" | "Hybrid" | "Online";
+
+export const LEVEL_LABEL: Record<Level, string> = {
+  beginner: "Beginner",
+  intermediate: "Intermediate",
+  advanced: "Advanced",
+  "all-levels": "All levels",
+};
 
 export type Course = {
   slug: string;
   title: string;
   category: string;
   level: Level;
+  description: string;
   duration: string;
   nextStart: string;
   price: number; // in GHS; 0 = free
+  delivery?: Delivery;
   // Optional photo, e.g. "/courses/cyber-security.jpg" (put files in public/courses/).
-  // Courses without one show a woven placeholder instead of a broken image.
+  // Courses without one show the ITFY logo instead of a broken image.
   image?: string;
 };
 
@@ -30,6 +40,7 @@ export type Cohort = {
 export const HERO = {
   title: "Find the right training pathway",
   lead: "Compare current programmes by level, format and focus. Cohort 8 Foundations is now open, with short sprints and career labs starting through August.",
+  note: "Every pathway is project-driven, with clear start dates, deadlines and progression support. Use the cohort dates and the four steps below to plan your application.",
   image: { src: "/randomPictures/mainGraduationpic.jpg", alt: "ITFY graduates seated at their graduation ceremony" },
 };
 
@@ -48,12 +59,104 @@ export const GUIDANCE = [
   },
 ];
 
+// Photos: swap each `image` for the course's own photo (files go in public/).
 export const COURSES: Course[] = [
-  { slug: "cyber-security", title: "Cyber Security", category: "Technology and Digital Skills", level: "beginner", duration: "8 weeks", nextStart: "1 May 2026", price: 300 },
-  { slug: "data-analysis-with-python", title: "Data Analysis with Python", category: "Technology and Digital Skills", level: "beginner", duration: "8 weeks", nextStart: "1 May 2026", price: 300 },
-  { slug: "data-analytics-with-excel", title: "Data Analytics with Excel", category: "Technology and Digital Skills", level: "beginner", duration: "8 weeks", nextStart: "1 May 2026", price: 300 },
-  { slug: "front-end-development", title: "Front-End Development", category: "Technology and Digital Skills", level: "intermediate", duration: "8 weeks", nextStart: "1 May 2026", price: 300 },
-  { slug: "ui-ux-design-fundamentals", title: "UI/UX Design Fundamentals", category: "Technology and Digital Skills", level: "beginner", duration: "8 weeks", nextStart: "1 May 2026", price: 300 },
+  {
+    slug: "front-end-web-development-foundations",
+    title: "Front-End Web Development Foundations",
+    category: "Software Development",
+    level: "beginner",
+    description: "A practical entry route into building responsive web experiences and understanding front-end fundamentals.",
+    duration: "12 weeks",
+    nextStart: "15 Jun 2026",
+    price: 0,
+    delivery: "Hybrid",
+    image: "/randomPictures/studentsBackcoding.jpg",
+  },
+  {
+    slug: "digital-marketing-and-content-strategy",
+    title: "Digital Marketing and Content Strategy",
+    category: "Marketing",
+    level: "beginner",
+    description: "A route into digital visibility, messaging and content systems for growing brands and ideas.",
+    duration: "6 weeks",
+    nextStart: "29 Jun 2026",
+    price: 0,
+    delivery: "Online",
+    image: "/randomPictures/happystudentscasual.jpg",
+  },
+  {
+    slug: "creative-coding-for-teens",
+    title: "Creative Coding for Teens",
+    category: "Emerging Tech",
+    level: "beginner",
+    description: "An accessible first step for younger learners exploring technology through creativity and teamwork.",
+    duration: "8 weeks",
+    nextStart: "6 Jul 2026",
+    price: 300,
+    delivery: "In-person",
+    image: "/randomPictures/happystudentscasual.jpg",
+  },
+  {
+    slug: "ux-design-essentials",
+    title: "UX Design Essentials",
+    category: "Design",
+    level: "beginner",
+    description: "An introduction to UX research, prototyping and thoughtful digital product design.",
+    duration: "10 weeks",
+    nextStart: "20 Jul 2026",
+    price: 350,
+    delivery: "In-person",
+    image: "/randomPictures/studentsBackcoding.jpg",
+  },
+  {
+    slug: "entrepreneurship-lab-for-digital-creators",
+    title: "Entrepreneurship Lab for Digital Creators",
+    category: "Entrepreneurship",
+    level: "all-levels",
+    description: "For learners who want to connect digital skills to business ideas, freelancing or venture experimentation.",
+    duration: "6 weeks",
+    nextStart: "3 Aug 2026",
+    price: 0,
+    delivery: "In-person",
+    image: "/randomPictures/studentsBackcoding.jpg",
+  },
+  {
+    slug: "data-analytics-essentials",
+    title: "Data Analytics Essentials",
+    category: "Data",
+    level: "intermediate",
+    description: "A skills path for learners who want to interpret data, spot patterns and communicate insights clearly.",
+    duration: "8 weeks",
+    nextStart: "17 Aug 2026",
+    price: 450,
+    delivery: "Hybrid",
+    image: "/randomPictures/studentsBackcoding.jpg",
+  },
+  {
+    slug: "career-launch-lab",
+    title: "Career Launch Lab",
+    category: "Employability",
+    level: "all-levels",
+    description: "A short intensive focused on employability, confidence and presenting your work well.",
+    duration: "4 weeks",
+    nextStart: "17 Aug 2026",
+    price: 0,
+    delivery: "Hybrid",
+    image: "/randomPictures/mainGraduationpic.jpg",
+  },
+  {
+    slug: "python-for-problem-solving",
+    title: "Python for Problem Solving",
+    category: "Software Development",
+    level: "intermediate",
+    description: "A next-step coding track for learners ready to move beyond basic digital fluency into programming.",
+    duration: "10 weeks",
+    nextStart: "7 Sep 2026",
+    price: 500,
+    // delivery: confirm with ITFY (hidden in the reference screenshot)
+    image: "/randomPictures/happystudentscasual.jpg",
+  },
 ];
 
 export const COHORTS_INTRO = {
@@ -100,10 +203,26 @@ export const STEPS_INTRO = {
 };
 
 export const STEPS = [
-  { title: "Choose your route", text: "Start by finding the course or cohort that matches your stage, interests, schedule and confidence level." },
-  { title: "Apply with context", text: "Share basic background, motivation and availability so the team can understand your fit and support needs." },
-  { title: "Review and confirm", text: "Applications are reviewed, shortlisted learners are contacted, and final places are confirmed before onboarding." },
-  { title: "Join the cohort", text: "Accepted learners receive orientation details, start dates and expectations for the next learning cycle." },
+  {
+    title: "Choose your route",
+    text: "Start by finding the course or cohort that matches your stage, interests, schedule and confidence level.",
+    image: { src: "/randomPictures/studentsBackcoding.jpg", alt: "Learners comparing work around a classroom table" },
+  },
+  {
+    title: "Apply with context",
+    text: "Share basic background, motivation and availability so the team can understand your fit and support needs.",
+    image: { src: "/randomPictures/happystudentscasual.jpg", alt: "Applicants working on laptops together" },
+  },
+  {
+    title: "Review and confirm",
+    text: "Applications are reviewed, shortlisted learners are contacted, and final places are confirmed before onboarding.",
+    image: { src: "/randomPictures/mainGraduationpic.jpg", alt: "A trainer presenting to a room of learners" },
+  },
+  {
+    title: "Join the cohort",
+    text: "Accepted learners receive orientation details, start dates and expectations for the next learning cycle.",
+    image: { src: "/randomPictures/studentsBackcoding.jpg", alt: "A new cohort in class on their first day" },
+  },
 ];
 
 export const HELP = {

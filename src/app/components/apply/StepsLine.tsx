@@ -1,9 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import type { CSSProperties } from "react";
 import { useInView } from "../who-we-are/useInView";
 
-type Step = { title: string; text: string };
+type Step = { title: string; text: string; image?: { src: string; alt: string } };
 
 // Numbered steps joined by a gold line that draws as they scroll into view.
 // Vertical on phones and tablets, horizontal from large screens up.
@@ -49,9 +50,20 @@ export default function StepsLine({ steps }: { steps: Step[] }) {
             >
               {i + 1}
             </span>
-            <div className="lg:mt-7">
+            <div className="min-w-0 flex-1 lg:mt-7">
               <h3 className="text-xl font-bold tracking-[-0.02em] text-ink">{step.title}</h3>
               <p className="mt-2 max-w-[40ch] text-[15px] leading-relaxed text-ink/70">{step.text}</p>
+              {step.image && (
+                <div className="relative mt-5 aspect-[16/10] overflow-hidden rounded-2xl sm:max-w-md lg:max-w-none">
+                  <Image
+                    src={step.image.src}
+                    alt={step.image.alt}
+                    fill
+                    sizes="(min-width: 1024px) 22vw, (min-width: 640px) 28rem, 85vw"
+                    className="object-cover"
+                  />
+                </div>
+              )}
             </div>
           </li>
         );

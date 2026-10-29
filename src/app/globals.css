@@ -26,11 +26,11 @@
     to   { transform: translateX(-50%); }
   }
 
-  /* kente squares weaving in on page load */
-  --animate-weave: weave-in 600ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
-  @keyframes weave-in {
-    from { opacity: 0; transform: scale(0.2) rotate(-12deg); }
-    to   { opacity: 1; transform: scale(1) rotate(0deg); }
+  /* page titles rising in on load */
+  --animate-hero-rise: hero-rise 900ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  @keyframes hero-rise {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
   }
 }
 
@@ -38,6 +38,12 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 6rem; /* anchor links clear the sticky navbar */
+}
+
+@media (min-width: 1280px) {
+  html {
+    scroll-padding-top: 9.5rem; /* navbar is two rows on large screens */
+  }
 }
 
 body {

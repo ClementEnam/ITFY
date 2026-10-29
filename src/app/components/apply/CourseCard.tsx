@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { Course } from "./content";
+import { LEVEL_LABEL, type Course } from "./content";
 
 const LEVEL_STYLE: Record<Course["level"], string> = {
   beginner: "bg-kente-green/10 text-kente-green",
   intermediate: "bg-gold/20 text-ink",
   advanced: "bg-kente-red/10 text-kente-red",
+  "all-levels": "bg-ink/10 text-ink",
 };
 
 export default function CourseCard({ course }: { course: Course }) {
@@ -13,7 +14,7 @@ export default function CourseCard({ course }: { course: Course }) {
 
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-[1.75rem] bg-white ring-1 ring-line transition-[box-shadow,transform] duration-300 hover:-translate-y-1 hover:shadow-[0_30px_60px_-30px_rgba(16,32,74,0.45)]">
-      {/* image, or a woven placeholder when there isn't one */}
+      {/* course photo, or the ITFY logo when there isn't one */}
       <div className="relative aspect-[16/10] overflow-hidden bg-ink">
         {course.image ? (
           <Image
@@ -25,17 +26,23 @@ export default function CourseCard({ course }: { course: Course }) {
           />
         ) : (
           <div className="absolute inset-0 grid place-items-center bg-[radial-gradient(circle_at_70%_30%,var(--color-ink-soft),var(--color-ink)_70%)]">
-            <Image alt="Nav Photo" src="/logo/logo.png" height={90} width = {90}/>
+            <span className="grid h-20 w-20 place-items-center rounded-2xl bg-white p-2 transition-transform duration-500 group-hover:scale-110">
+              <Image height={90} width={90} alt="" src="/logo/logo.png" className="h-full w-full object-contain" />
+            </span>
           </div>
         )}
-        <span className={`absolute left-4 top-4 rounded-full px-3 py-1 text-xs font-semibold capitalize backdrop-blur ${LEVEL_STYLE[course.level]} ${course.image ? "bg-white/90" : "bg-white"}`}>
-          {course.level}
+        {/* white chip underneath so the tinted level colour stays readable on any photo */}
+        <span className="absolute left-4 top-4 rounded-full bg-white shadow-sm">
+          <span className={`block rounded-full px-3 py-1 text-xs font-semibold ${LEVEL_STYLE[course.level]}`}>
+            {LEVEL_LABEL[course.level]}
+          </span>
         </span>
       </div>
 
       <div className="flex flex-1 flex-col p-6">
         <p className="text-sm font-medium text-ink/55">{course.category}</p>
         <h3 className="mt-2 text-xl font-bold leading-snug tracking-[-0.02em] text-ink">{course.title}</h3>
+        <p className="mt-2 text-[15px] leading-relaxed text-ink/65">{course.description}</p>
 
         <dl className="mt-5 grid grid-cols-2 gap-3 text-sm">
           <div className="rounded-2xl bg-paper px-4 py-3">
@@ -52,6 +59,7 @@ export default function CourseCard({ course }: { course: Course }) {
           <p>
             <span className="block text-sm text-ink/55">Price</span>
             <span className="text-2xl font-extrabold tracking-[-0.03em] text-ink">{price}</span>
+            {course.delivery && <span className="block text-sm text-ink/55">{course.delivery}</span>}
           </p>
           <div className="flex items-center gap-2">
             <Link

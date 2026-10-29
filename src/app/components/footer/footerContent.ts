@@ -49,6 +49,15 @@ export const FOOTER_COLUMNS = [
     ],
   },
   {
+    title: "Laptop Bank",
+    links: [
+      { label: "How it works", href: "/laptop-bank" },
+      { label: "What we accept", href: "/laptop-bank/what-we-accept" },
+      { label: "Data security", href: "/laptop-bank/data-security" },
+      { label: "Donate equipment", href: "/laptop-bank/donate" },
+    ],
+  },
+  {
     title: "Impact & contact",
     links: [
       { label: "Impact overview", href: "/our-impact" },
