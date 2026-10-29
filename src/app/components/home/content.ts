@@ -1,3 +1,6 @@
+import { PARTNERS as PARTNER_LIST } from "../partners/content";
+import { PEOPLE } from "../team/content";
+
 // All text, numbers and images for the homepage sections below the hero.
 // Anything marked TODO couldn't be read from the reference screenshot — paste
 // ITFY's real wording there. The components never need to change.
@@ -124,15 +127,14 @@ export const TEAM = {
   title: "Meet the people behind the mission.",
   text: "Trainers, mentors and staff who work alongside learners every day.",
   action: { label: "Meet the whole team", href: "/who-we-are/team" },
-  // TODO: add real team members. Leave the list empty to show just the link.
-  members: [] as { name: string; role: string; image?: string }[],
+  // Comes from the Our Team page's list (components/team/content.ts), so both stay in sync.
+  members: PEOPLE.map((p) => ({ name: p.name, role: p.role, image: p.photo })),
 };
 
 export const PARTNERS = {
   label: "Our partners",
   title: "Trusted by organisations across Ghana and beyond.",
-  // TODO: add partner logos, e.g. { name: "Partner name", logo: "/partners/name.png" }
-  // With none listed, the section invites organisations to partner instead.
-  logos: [] as { name: string; logo: string }[],
+  // Comes from the Our Partners page's list (components/partners/content.ts), so both stay in sync.
+  list: PARTNER_LIST,
   action: { label: "Partner with us", href: "/partner-with-us" },
 };

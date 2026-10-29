@@ -4,14 +4,6 @@ import Reveal from "../who-we-are/Reveal";
 import { TEAM } from "./content";
 import { Arrow, container, h2, sectionSpace, SectionLabel } from "./ui";
 
-const initials = (name: string) =>
-  name
-    .split(" ")
-    .map((w) => w[0])
-    .slice(0, 2)
-    .join("")
-    .toUpperCase();
-
 export default function Team() {
   return (
     <section className={`bg-white ${sectionSpace}`}>
@@ -40,8 +32,9 @@ export default function Team() {
                     {m.image ? (
                       <Image src={m.image} alt={m.name} fill sizes="(min-width: 1024px) 22vw, 45vw" className="object-cover" />
                     ) : (
-                      <span aria-hidden="true" className="grid h-full place-items-center text-4xl font-extrabold text-ink/25">
-                        {initials(m.name)}
+                      // no photo yet: show the ITFY logo instead
+                      <span className="grid h-full place-items-center p-[22%]">
+                        <Image src="/logo/logo.png" alt="" width={90} height={90} className="h-full w-full object-contain" />
                       </span>
                     )}
                   </div>
