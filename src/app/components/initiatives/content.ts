@@ -203,6 +203,105 @@ export const INITIATIVES: Initiative[] = [
       { role: "Proof", title: "Impact reports", text: "The data behind every cohort.", cta: "Read the reports", href: "/our-impact/reports" },
     ],
   },
+  {
+    slug: "entrepreneurship-hub",
+    name: "Entrepreneurship Hub",
+    hero: {
+      lead: "Where digital skills become ventures: disciplined entrepreneurship support for Ghana's next generation of founders.",
+      // TODO: ITFY's exact hero note
+      note: "A structured support pathway that helps young Ghanaians turn digital skills and ideas into viable ventures, products and income-generating opportunities.",
+      image: { src: IMG.graduation, alt: "A founder presenting during an Entrepreneurship Hub session" },
+      primary: { label: "Apply for Cohort 8", href: "/apply" },
+      secondary: { label: "Contact the team", href: "/contact" },
+    },
+    overview: {
+      title: "A focused pathway with clear outcomes",
+      // TODO: ITFY's paragraphs and pull quote
+      paragraphs: [
+        "The Entrepreneurship Hub bridges technical capability and business execution. It gives learners and early founders the tools, feedback and networks they need to move from concept to customer, prototype to product, and idea to income.",
+        "The hub exists to convert technical skill into sustainable economic opportunity by equipping young Ghanaians with the business discipline, market insight and support networks required to build and grow ventures.",
+      ],
+      quote: "Participants move from technical prototype to validated business idea, build practical skills in customer discovery, pricing and pitching, and leave with clear pathways into self-employment and venture creation.",
+      image: { src: IMG.graduation, alt: "A speaker addressing Entrepreneurship Hub participants" },
+    },
+    journey: {
+      title: "A programme journey that moves from access to confidence",
+      text: "Each cohort follows four stages, so participants and partners know what to expect from first contact to measurable outcomes.",
+      // TODO: ITFY's wording for each stage
+      steps: [
+        { title: "Discover", text: "Participants identify real problems, validate demand and define the value their idea could deliver.", image: { src: IMG.coding, alt: "Participants in a discovery workshop" } },
+        { title: "Build", text: "Founders develop minimum viable products, test with real users and refine based on feedback.", image: { src: IMG.group, alt: "Founders building their products" } },
+        { title: "Pitch & refine", text: "Regular pitch sessions and mentor clinics help founders sharpen their narrative and business model.", image: { src: IMG.coding, alt: "A founder pitching to mentors" } },
+        { title: "Launch & scale", text: "Promising ventures receive introductions to partners, investors and growth programmes.", image: { src: IMG.graduation, alt: "Founders at a launch event" } },
+      ],
+    },
+    proof: {
+      title: "Proof that the model is translating into real opportunity",
+      text: "These indicators help show who the initiative is reaching, how consistently it is delivering and why it matters.",
+      // TODO: confirm the labels and descriptions (the figures were readable, the small text wasn't)
+      stats: [
+        { value: "320+", label: "Founders trained", text: "Young people who have completed entrepreneurship modules or hub programmes." },
+        { value: "48", label: "Startups launched", text: "Businesses that began or were strengthened through ITFY support." },
+        { value: "22", label: "Revenue-generating ventures", text: "Participants generating consistent income from their ventures." },
+        { value: "85%", label: "Founder progression", text: "Hub participants who report improved business skills or traction within six months." },
+      ],
+    },
+    audience: {
+      title: "Who it's for",
+      // TODO: confirm with ITFY
+      text: "The Entrepreneurship Hub is for young Ghanaians who have technical or creative skills and want to build income-generating ventures rather than (or alongside) traditional employment.",
+      points: [
+        "Academy graduates ready to explore self-employment or product-based businesses",
+        "Young founders with early ideas who need structure, feedback and accountability",
+        "Women and youth from underserved communities seeking dignified economic pathways",
+      ],
+      eligibilityTitle: "Eligibility",
+      eligibility: "Open to participants with ideas at any stage, from concept to early revenue. Applicants should have a clear problem they want to solve and be ready to engage with real customers. Priority is given to founders whose ventures address local problems or serve underserved markets.",
+    },
+    gallery: {
+      title: "Scenes from the classrooms, workshops and communities behind the work",
+      // TODO: Entrepreneurship Hub photos and captions
+      photos: [
+        { src: IMG.graduation, alt: "A founder presenting an idea", caption: "Founder pitch session" },
+        { src: IMG.coding, alt: "Participants at a workshop", caption: "Venture-building workshop" },
+        { src: IMG.group, alt: "Participants celebrating together", caption: "Cohort community" },
+        { src: IMG.coding, alt: "Founders working on their products", caption: "Product build time" },
+      ],
+    },
+    stories: {
+      title: "Stories that show what this initiative feels like from the inside",
+      // TODO: add the three participant/mentor quotes from ITFY's page (with consent to be named)
+      items: [],
+    },
+    partners: {
+      title: "Organisations that help this initiative reach further",
+      // TODO: add how each partner supports the hub, plus logos and websites
+      items: [
+        { name: "Tony Elumelu Foundation", text: "" },
+        { name: "Mastercard Foundation", text: "" },
+      ],
+    },
+    faq: {
+      title: "Answers to common questions about the initiative",
+      // TODO: confirm questions and add ITFY's answers
+      items: [
+        { q: "Do participants need a registered business?", a: "No. Ideas at any stage are welcome, from an early concept to a business that is already earning." },
+        { q: "Is there funding available?", a: "The hub focuses on skills, mentorship and introductions. Promising ventures may be introduced to partners, investors and growth programmes." },
+        { q: "Can I join without completing the Youth Tech Academy?", a: "Yes. Academy graduates are welcome, but founders with skills from elsewhere can apply too." },
+      ],
+    },
+    cta: {
+      title: "Ready to explore Entrepreneurship Hub?",
+      text: "Apply to join the next cohort, or partner with us to mentor, fund or open doors for young founders.",
+      primary: { label: "Apply for Cohort 8", href: "/apply" },
+      secondary: { label: "Contact the team", href: "/contact" },
+    },
+    explore: [
+      { role: "Skills", title: "Youth Tech Academy", text: "Build the technical skills behind your venture.", cta: "Explore the academy", href: "/what-we-do/youth-tech-academy" },
+      { role: "Train", title: "Apply for training", text: "Browse courses and upcoming cohorts.", cta: "See courses", href: "/apply" },
+      { role: "Partner", title: "Partner with us", text: "Mentor, fund or open doors for young founders.", cta: "See partnership routes", href: "/partner-with-us" },
+    ],
+  },
 ];
 
 export const getInitiative = (slug: string) => INITIATIVES.find((i) => i.slug === slug);
