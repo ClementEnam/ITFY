@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { LEVEL_LABEL, type Course } from "./content";
+import { APPLY_PORTAL_URL, LEVEL_LABEL, type Course } from "./content";
 
 const LEVEL_STYLE: Record<Course["level"], string> = {
   beginner: "bg-kente-green/10 text-kente-green",
@@ -68,13 +68,13 @@ export default function CourseCard({ course }: { course: Course }) {
             >
               Details
             </Link>
-            <Link
-              href={`/apply/form?course=${course.slug}`}
-              aria-label={`Apply for ${course.title}`}
+            <a
+              href={APPLY_PORTAL_URL}
+              aria-label={`Apply for ${course.title} on the ITFY portal`}
               className="rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-ink-soft"
             >
               Apply
-            </Link>
+            </a>
           </div>
         </div>
       </div>

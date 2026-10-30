@@ -5,6 +5,7 @@ import CourseCatalog from "../components/apply/CourseCatalog";
 import StepsLine from "../components/apply/StepsLine";
 import Reveal from "../components/who-we-are/Reveal";
 import {
+  APPLY_PORTAL_URL,
   COHORTS,
   COHORTS_INTRO,
   GUIDANCE,
@@ -178,12 +179,12 @@ export default function ApplyPage() {
                         Apply by <span className="font-semibold text-ink">{c.deadline}</span>
                       </p>
                       {c.status === "open" && (
-                        <Link
-                          href={`/apply/form?cohort=${encodeURIComponent(c.title)}`}
+                        <a
+                          href={APPLY_PORTAL_URL}
                           className="inline-block rounded-full bg-ink px-6 py-3 text-[15px] font-semibold text-white transition-colors hover:bg-ink-soft lg:mt-3"
                         >
                           Apply now
-                        </Link>
+                        </a>
                       )}
                     </div>
                   </article>

@@ -1,11 +1,15 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { SECTIONS } from "./content";
+import { SECTIONS as DEFAULT_SECTIONS } from "./content";
+
+type Section = { id: string; label: string };
 
 // Sticky "on this page" bar. Highlights the section you're reading
 // and keeps the active pill in view on small screens.
-export default function SectionNav() {
+// Pass the page's own section list; falls back to the original Who We Are sections.
+export default function SectionNav({ sections = DEFAULT_SECTIONS }: { sections?: readonly Section[] }) {
+  const SECTIONS = sections;
   const [active, setActive] = useState<string>(SECTIONS[0].id);
   const listRef = useRef<HTMLUListElement>(null);
 
@@ -23,7 +27,7 @@ export default function SectionNav() {
       if (el) observer.observe(el);
     });
     return () => observer.disconnect();
-  }, []);
+  }, [SECTIONS]);
 
   // keep the active pill visible in the horizontal scroller
   useEffect(() => {

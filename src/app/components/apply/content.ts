@@ -1,6 +1,9 @@
 // All text and data for the Apply for Training page.
 // Courses and cohorts are the parts that will come from Payload later.
 
+// Where every "Apply" button on the Apply page sends people (the ITFY applications portal).
+export const APPLY_PORTAL_URL = "https://portal.itforyouthghana.org/login";
+
 export type Level = "beginner" | "intermediate" | "advanced" | "all-levels";
 export type Delivery = "In-person" | "Hybrid" | "Online";
 

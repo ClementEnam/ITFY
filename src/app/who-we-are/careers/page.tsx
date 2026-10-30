@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-// import { ENGAGE, EXPLORE, HERO, OPENINGS, ROLES } from "../../components/careers/content";
-import { ENGAGE, EXPLORE, HERO, OPENINGS, ROLES } from "@/app/components/Content";
+import { ENGAGE, EXPLORE, HERO, OPENINGS, ROLES } from "@/app/components/careers/content";
 import { Arrow, container, h2, sectionSpace, SectionLabel } from "../../components/home/ui";
 import ExploreBand from "../../components/shared/ExploreBand";
 import NumbersBand from "../../components/shared/NumbersBand";
