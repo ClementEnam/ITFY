@@ -108,10 +108,18 @@ export const GRADUATE = {
   image: { src: IMG.coding, alt: "An ITFY graduate working on a laptop in class" },
 };
 
-export const STORIES = {
+export type Story = {
+  quote: string;
+  name: string;
+  role: string;
+  image?: string; // optional photo; without one, their initials are shown
+};
+
+export const STORIES: { label: string; title: string; text: string; items: Story[] } = {
   label: "Student stories",
   title: "The human proof behind the numbers.",
-  // Add more stories to this list and the arrows appear automatically.
+  text: "One strong story can do what a long paragraph cannot.",
+  // Add as many stories as you like. The carousel, dots and arrows adjust automatically.
   items: [
     {
       quote:
@@ -119,6 +127,18 @@ export const STORIES = {
       name: "Girls in Tech graduate", // TODO: name, if she has agreed to be named
       role: "UX designer and mentor",
       image: IMG.graduation,
+    },
+    {
+      quote:
+        "The academy gave me structure and accountability I had never experienced. I moved from not knowing what a portfolio was to presenting real projects to mentors. Six months after graduating, I started as a junior developer in Accra.",
+      name: "Ama Kofi",
+      role: "Youth Tech Academy graduate", // TODO: confirm her role, and add her photo
+    },
+    {
+      quote:
+        "We partnered with IT For Youth Ghana to run tech clubs in our school. The consistency of the sessions transformed how our students see technology. Several have now joined the academy, and one is already interning with a local tech company.",
+      name: "Partner school", // TODO: the speaker's name and school
+      role: "Tech Clubs partner", // TODO: e.g. "Headteacher, … School"
     },
   ],
 };

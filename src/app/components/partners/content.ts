@@ -3,9 +3,9 @@
 
 export type Partner = {
   name: string;
-  url?: string; // their website; adds a "Visit" link
   logo?: string; // e.g. "/partners/name.png" in public/. Without one, the name is shown as text.
-  role?: string; // short note on how they work with ITFY
+  url?: string;
+  role?: string;
 };
 
 export const HERO = {
@@ -39,7 +39,13 @@ export const NETWORK = {
 
 // TODO: add every partner named above, with their logo (check each brand's logo-use rules) and website
 export const PARTNERS: Partner[] = [
-  { name: "Northern Tech Community Awards 2026", url: "" },
+  { name: "Accra Technical University", logo: "/partnerorga/atu.jpg"},
+  { name: "afos", logo:"/partnerorga/afos.jpg"},
+  { name: "gctu", logo: "/partnerorga/gctu.jpg"},
+  { name: "KNUST", logo:"/partnerorga/knust.jpg"},
+  { name: "UCC", logo: "/partnerorga/ucc.jpg"},
+  { name: "UG", logo:"/partnerorga/ug.jpg"},
+  { name: "UEW", logo: "/partnerorga/uew.jpg"},
 ];
 
 export const EXPLORE = {
