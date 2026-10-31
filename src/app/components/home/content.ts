@@ -9,13 +9,17 @@ const IMG = {
   coding: "/randomPictures/studentsBackcoding.jpg",
   group: "/randomPictures/happystudentscasual.jpg",
   graduation: "/randomPictures/mainGraduationpic.jpg",
+  juniorDev: "/people/benedicta.jpg",
+  uxDev: "/people/danielle.jpg",
+  ictHead: "/people/mensah.jpg"
+
 };
 
 export const WHY = {
   label: "Why we exist",
   title: "Ghana's digital future should belong to every young person, especially women.",
   // TODO: replace with ITFY's paragraph
-  text: "Digital skills now decide who gets to take part in Ghana's growing economy. Too many young people, and young women most of all, never get a fair first step. We train them in practical skills, connect them with mentors and help them into work, study or their own ventures.",
+  text: "Our digital economy is growing fast, and teh opportunities in it are real. They are just not reaching everyone. Training sits in a handful of cities. A computer of her own is out of reach for most students. And too many young people leave school having never met anyone who does this work for a living",
   quote: "IT For Youth Ghana exists to close that gap with training that is practical, inclusive and measured by what young people go on to do.",
   action: { label: "Discover training pathways", href: "/apply" },
   image: { src: IMG.coding, alt: "Young learners working at computers in an ITFY class" },
@@ -30,10 +34,10 @@ export const CHALLENGE = {
   text: "Ghana's digital divide keeps capable young people from the learning, connections and opportunities they need to take part in the digital economy.",
   // TODO: add what each figure measures, and its source
   stats: [
-    { value: "30.1%", label: "TODO: what this figure measures" },
-    { value: "77.3%", label: "TODO: what this figure measures" },
-    { value: "25%", label: "TODO: what this figure measures" },
-    { value: "70%", label: "TODO: what this figure measures" },
+    { value: "30.1%", label: "Offline Population: \n 10.5M people without internet access" },
+    { value: "77.3%", label: "Rural Digital Gap: \n Rural Residents without internet" },
+    { value: "25%", label: "Limited Access: \n Rural areas lack mobile coverage" },
+    { value: "70%", label: "Skills Gap: \n Youth lack digital skills" },
   ],
   divide: {
     title: "What the digital divide changes",
@@ -62,7 +66,7 @@ export const MISSION = {
   title: "Turn digital learning into real opportunity.",
   text: "We equip young Ghanaians, particularly women and underserved communities, with practical skills, mentorship and pathways into employment, further study and business building.",
   action: { label: "Discover who we are", href: "/who-we-are" },
-  image: { src: IMG.group, alt: "ITFY learners celebrating together" },
+  image: { src: IMG.graduation, alt: "ITFY learners celebrating together" },
   stats: [
     { value: "3,000+", label: "young people trained" },
     { value: "8,500+", label: "students reached through schools and communities" },
@@ -124,21 +128,23 @@ export const STORIES: { label: string; title: string; text: string; items: Story
     {
       quote:
         "Before Girls in Tech, I was curious but unsure whether tech was for someone like me. The mentorship and cohort community made it feel achievable. I now work as a UX designer and mentor the next group of young women coming through the programme.",
-      name: "Girls in Tech graduate", // TODO: name, if she has agreed to be named
-      role: "UX designer and mentor",
-      image: IMG.graduation,
+      name: "Efua Asante", 
+      role: "UX Designer",
+      image: IMG.uxDev,
     },
     {
       quote:
         "The academy gave me structure and accountability I had never experienced. I moved from not knowing what a portfolio was to presenting real projects to mentors. Six months after graduating, I started as a junior developer in Accra.",
       name: "Ama Kofi",
-      role: "Youth Tech Academy graduate", // TODO: confirm her role, and add her photo
+      role: "Junior Developer", 
+      image: IMG.juniorDev,
     },
     {
       quote:
         "We partnered with IT For Youth Ghana to run tech clubs in our school. The consistency of the sessions transformed how our students see technology. Several have now joined the academy, and one is already interning with a local tech company.",
-      name: "Partner school", // TODO: the speaker's name and school
-      role: "Tech Clubs partner", // TODO: e.g. "Headteacher, … School"
+      name: "Mr. Isaac Mensah", 
+      role: "Head of ICT", 
+      image: IMG.ictHead,
     },
   ],
 };
