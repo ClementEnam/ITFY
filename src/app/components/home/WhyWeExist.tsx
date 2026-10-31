@@ -16,12 +16,12 @@ export default function WhyWeExist() {
           <SectionLabel>{WHY.label}</SectionLabel>
           <h2 className={`${h2} mt-5 max-w-[20ch] text-ink`}>{WHY.title}</h2>
           <p className="mt-6 max-w-[54ch] text-lg leading-relaxed text-ink/70">{WHY.text}</p>
-          <blockquote className="mt-6 max-w-[54ch] border-l-[3px] border-gold pl-5 text-[15px] leading-relaxed text-ink/65">
+          <blockquote className="mt-6 max-w-[54ch] border-l-[3px] border-gold pl-5 text-[0.9375rem] leading-relaxed text-ink/65">
             {WHY.quote}
           </blockquote>
           <Link
             href={WHY.action.href}
-            className="mt-9 inline-block rounded-full bg-ink px-7 py-3.5 text-[15px] font-semibold text-white transition-colors hover:bg-ink-soft"
+            className="mt-9 inline-block rounded-full bg-ink px-7 py-3.5 text-[0.9375rem] font-semibold text-white transition-colors hover:bg-ink-soft"
           >
             {WHY.action.label}
           </Link>

@@ -63,11 +63,11 @@ export default function WhatWeAcceptPage() {
             <div>
               <p className="text-sm font-bold text-ink/70">Before you offer anything</p>
               <h2 className="mt-2 text-[clamp(1.75rem,3vw,2.5rem)] font-extrabold leading-[1.1] tracking-[-0.03em] text-ink">{CHECK.title}</h2>
-              <p className="mt-4 max-w-[62ch] text-[15px] leading-relaxed text-ink/80 sm:text-base">{CHECK.text}</p>
+              <p className="mt-4 max-w-[62ch] text-[0.9375rem] leading-relaxed text-ink/80 sm:text-base">{CHECK.text}</p>
             </div>
             <ol className="space-y-3">
               {CHECK.items.map((it, i) => (
-                <li key={it} className="flex items-center gap-4 rounded-2xl bg-white p-5 text-[15px] font-semibold text-ink">
+                <li key={it} className="flex items-center gap-4 rounded-2xl bg-white p-5 text-[0.9375rem] font-semibold text-ink">
                   <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-ink text-sm font-bold text-white">{i + 1}</span>
                   {it}
                 </li>
@@ -98,11 +98,11 @@ export default function WhatWeAcceptPage() {
               {ACCEPTED.map((a) => (
                 <li key={a.item} className="grid gap-2 border-t border-line px-6 py-5 first:border-t-0 md:grid-cols-[0.9fr_1.6fr_1.4fr] md:gap-8 md:px-7">
                   <span className="font-bold text-ink">{a.item}</span>
-                  <span className="text-[15px] text-ink/85">
+                  <span className="text-[0.9375rem] text-ink/85">
                     <span className="mr-1 text-ink/50 md:hidden">Minimum:</span>
                     {a.minimum}
                   </span>
-                  <span className="text-[15px] text-ink/60">{a.note}</span>
+                  <span className="text-[0.9375rem] text-ink/60">{a.note}</span>
                 </li>
               ))}
             </ul>
@@ -118,7 +118,7 @@ export default function WhatWeAcceptPage() {
                   <Cross />
                   <span>
                     <span className="block font-bold text-ink">{n.item}</span>
-                    {n.note && <span className="mt-1 block text-[15px] leading-snug text-ink/60">{n.note}</span>}
+                    {n.note && <span className="mt-1 block text-[0.9375rem] leading-snug text-ink/60">{n.note}</span>}
                   </span>
                 </li>
               ))}
@@ -133,10 +133,10 @@ export default function WhatWeAcceptPage() {
           <Reveal className="grid gap-8 rounded-[2.5rem] bg-ink px-6 py-12 text-white sm:px-12 sm:py-14 lg:grid-cols-[1.4fr_auto] lg:items-center lg:px-16">
             <p className="max-w-[44ch] text-[clamp(1.4rem,2.6vw,2rem)] font-bold leading-snug tracking-[-0.02em]">{CTA.text}</p>
             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
-              <Link href={CTA.primary.href} className="rounded-full bg-gold px-7 py-3.5 text-center text-[15px] font-bold text-ink transition-colors hover:bg-gold-soft">
+              <Link href={CTA.primary.href} className="rounded-full bg-gold px-7 py-3.5 text-center text-[0.9375rem] font-bold text-ink transition-colors hover:bg-gold-soft">
                 {CTA.primary.label}
               </Link>
-              <Link href={CTA.secondary.href} className="rounded-full bg-white/10 px-7 py-3.5 text-center text-[15px] font-semibold ring-1 ring-white/25 transition-colors hover:bg-white/15">
+              <Link href={CTA.secondary.href} className="rounded-full bg-white/10 px-7 py-3.5 text-center text-[0.9375rem] font-semibold ring-1 ring-white/25 transition-colors hover:bg-white/15">
                 {CTA.secondary.label}
               </Link>
             </div>

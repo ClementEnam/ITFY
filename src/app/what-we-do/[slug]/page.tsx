@@ -64,15 +64,15 @@ export default async function InitiativePage({ params }: Props) {
               {it.hero.lead}
             </p>
             {it.hero.note && (
-              <p className="mt-5 max-w-[56ch] animate-hero-rise text-[15px] leading-relaxed text-ink/60 [animation-delay:220ms] motion-reduce:animate-none">
+              <p className="mt-5 max-w-[56ch] animate-hero-rise text-[0.9375rem] leading-relaxed text-ink/60 [animation-delay:220ms] motion-reduce:animate-none">
                 {it.hero.note}
               </p>
             )}
             <div className="mt-10 flex animate-hero-rise flex-wrap gap-3 [animation-delay:300ms] motion-reduce:animate-none">
-              <Link href={it.hero.primary.href} className="rounded-full bg-ink px-7 py-3.5 text-[15px] font-semibold text-white transition-colors hover:bg-ink-soft">
+              <Link href={it.hero.primary.href} className="rounded-full bg-ink px-7 py-3.5 text-[0.9375rem] font-semibold text-white transition-colors hover:bg-ink-soft">
                 {it.hero.primary.label}
               </Link>
-              <Link href={it.hero.secondary.href} className="rounded-full bg-white px-7 py-3.5 text-[15px] font-semibold text-ink ring-1 ring-line transition-colors hover:ring-ink">
+              <Link href={it.hero.secondary.href} className="rounded-full bg-white px-7 py-3.5 text-[0.9375rem] font-semibold text-ink ring-1 ring-line transition-colors hover:ring-ink">
                 {it.hero.secondary.label}
               </Link>
             </div>
@@ -96,7 +96,7 @@ export default async function InitiativePage({ params }: Props) {
               <p key={p} className="mt-6 max-w-[56ch] text-lg leading-relaxed text-ink/70">{p}</p>
             ))}
             {it.overview.quote && (
-              <blockquote className="mt-7 max-w-[56ch] border-l-[3px] border-gold pl-5 text-[15px] leading-relaxed text-ink/65">
+              <blockquote className="mt-7 max-w-[56ch] border-l-[3px] border-gold pl-5 text-[0.9375rem] leading-relaxed text-ink/65">
                 {it.overview.quote}
               </blockquote>
             )}
@@ -130,7 +130,7 @@ export default async function InitiativePage({ params }: Props) {
                 <p className="mt-5 max-w-[56ch] text-lg leading-relaxed text-white/75">{it.audience.text}</p>
                 <ul className="mt-8 space-y-3">
                   {it.audience.points.map((p) => (
-                    <li key={p} className="flex gap-4 rounded-2xl bg-white/[0.06] px-5 py-4 text-[15px] leading-snug ring-1 ring-white/10">
+                    <li key={p} className="flex gap-4 rounded-2xl bg-white/[0.06] px-5 py-4 text-[0.9375rem] leading-snug ring-1 ring-white/10">
                       <svg aria-hidden="true" viewBox="0 0 20 20" fill="currentColor" className="mt-0.5 h-5 w-5 shrink-0 text-gold">
                         <path fillRule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.6l7.3-7.3a1 1 0 0 1 1.4 0z" clipRule="evenodd" />
                       </svg>
@@ -144,7 +144,7 @@ export default async function InitiativePage({ params }: Props) {
               <article className="flex h-full flex-col rounded-[2rem] bg-gold/15 p-8 sm:p-10">
                 <h2 className="text-[clamp(1.75rem,3vw,2.5rem)] font-extrabold leading-[1.1] tracking-[-0.03em] text-ink">{it.audience.eligibilityTitle}</h2>
                 <p className="mt-5 flex-1 text-lg leading-relaxed text-ink/75">{it.audience.eligibility}</p>
-                <Link href="/apply" className="mt-8 self-start rounded-full bg-ink px-7 py-3.5 text-[15px] font-semibold text-white transition-colors hover:bg-ink-soft">
+                <Link href="/apply" className="mt-8 self-start rounded-full bg-ink px-7 py-3.5 text-[0.9375rem] font-semibold text-white transition-colors hover:bg-ink-soft">
                   See the current intake
                 </Link>
               </article>
@@ -259,14 +259,34 @@ export default async function InitiativePage({ params }: Props) {
               <p className="mt-4 max-w-[52ch] text-lg leading-relaxed text-ink/80">{it.cta.text}</p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
-              <Link href={it.cta.primary.href} className="rounded-full bg-ink px-7 py-3.5 text-center text-[15px] font-semibold text-white transition-colors hover:bg-ink-soft">
+              <Link href={it.cta.primary.href} className="rounded-full bg-ink px-7 py-3.5 text-center text-[0.9375rem] font-semibold text-white transition-colors hover:bg-ink-soft">
                 {it.cta.primary.label}
               </Link>
-              <Link href={it.cta.secondary.href} className="rounded-full bg-white px-7 py-3.5 text-center text-[15px] font-semibold text-ink transition-colors hover:bg-white/80">
+              <Link href={it.cta.secondary.href} className="rounded-full bg-white px-7 py-3.5 text-center text-[0.9375rem] font-semibold text-ink transition-colors hover:bg-white/80">
                 {it.cta.secondary.label}
               </Link>
             </div>
           </Reveal>
+
+          {it.note && (
+            <Reveal className="mt-6 flex flex-col gap-4 rounded-[1.75rem] bg-white p-6 ring-1 ring-line sm:flex-row sm:items-center sm:justify-between sm:p-8">
+              <div className="flex items-start gap-4">
+                <span aria-hidden="true" className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-ink text-gold">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5">
+                    <rect x="4" y="5" width="16" height="11" rx="1.5" />
+                    <path d="M2 19h20" strokeLinecap="round" />
+                  </svg>
+                </span>
+                <p className="max-w-[60ch] text-base leading-relaxed text-ink/75">{it.note.text}</p>
+              </div>
+              <Link
+                href={it.note.link.href}
+                className="shrink-0 self-start rounded-full bg-paper px-5 py-2.5 text-sm font-semibold text-ink ring-1 ring-line transition-colors hover:ring-ink sm:self-center"
+              >
+                {it.note.link.label} →
+              </Link>
+            </Reveal>
+          )}
         </div>
       </section>
 

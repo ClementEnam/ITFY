@@ -74,7 +74,7 @@ export default function CampaignStats() {
         )}
       </dl>
 
-      <p className="mt-8 text-[15px] leading-relaxed text-ink/65">{CAMPAIGN.note}</p>
+      <p className="mt-8 text-[0.9375rem] leading-relaxed text-ink/65">{CAMPAIGN.note}</p>
     </div>
   );
 }

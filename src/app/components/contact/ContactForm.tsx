@@ -8,7 +8,7 @@ import { TOPICS } from "./topics";
 type Errors = Partial<Record<"topic" | "name" | "email" | "message", string>>;
 
 const field =
-  "w-full rounded-2xl bg-paper px-5 py-3.5 text-[15px] text-ink ring-1 ring-line transition-shadow placeholder:text-ink/40 focus:bg-white focus:outline-none focus:ring-2 focus:ring-ink aria-[invalid=true]:ring-2 aria-[invalid=true]:ring-kente-red";
+  "w-full rounded-2xl bg-paper px-5 py-3.5 text-[0.9375rem] text-ink ring-1 ring-line transition-shadow placeholder:text-ink/40 focus:bg-white focus:outline-none focus:ring-2 focus:ring-ink aria-[invalid=true]:ring-2 aria-[invalid=true]:ring-kente-red";
 
 // Contact form with a topic picker. There's no email backend yet, so sending
 // opens the visitor's email app with everything filled in, addressed to ITFY.
@@ -84,10 +84,10 @@ export default function ContactForm() {
           </svg>
         </span>
         <h2 className="mt-6 text-3xl font-extrabold tracking-[-0.03em] text-ink">Your message is ready to send</h2>
-        <p className="mt-3 max-w-[48ch] text-[15px] leading-relaxed text-ink/70">
+        <p className="mt-3 max-w-[48ch] text-[0.9375rem] leading-relaxed text-ink/70">
           Your email app should have opened with the message filled in. Press send there to reach us.
         </p>
-        <p className="mt-6 text-[15px] text-ink/70">
+        <p className="mt-6 text-[0.9375rem] text-ink/70">
           Nothing opened? Email us directly at{" "}
           <a href={`mailto:${CONTACT.email}`} className="font-semibold text-ink underline decoration-gold decoration-2 underline-offset-4">
             {CONTACT.email}
@@ -98,14 +98,14 @@ export default function ContactForm() {
           <button
             type="button"
             onClick={copyEmail}
-            className="rounded-full bg-ink px-6 py-3 text-[15px] font-semibold text-white transition-colors hover:bg-ink-soft"
+            className="rounded-full bg-ink px-6 py-3 text-[0.9375rem] font-semibold text-white transition-colors hover:bg-ink-soft"
           >
             {copied ? "Email address copied" : "Copy email address"}
           </button>
           <button
             type="button"
             onClick={() => setSent(false)}
-            className="rounded-full bg-white px-6 py-3 text-[15px] font-semibold text-ink ring-1 ring-line transition-colors hover:ring-ink"
+            className="rounded-full bg-white px-6 py-3 text-[0.9375rem] font-semibold text-ink ring-1 ring-line transition-colors hover:ring-ink"
           >
             Edit message
           </button>
@@ -155,19 +155,19 @@ export default function ContactForm() {
         {/* hint + shortcut for the chosen topic */}
         {current && (
           <div key={current.id} className="mt-5 animate-hero-rise rounded-2xl bg-gold/15 p-5 motion-reduce:animate-none" aria-live="polite">
-            <p className="text-[15px] leading-relaxed text-ink/80">{current.hint}</p>
+            <p className="text-[0.9375rem] leading-relaxed text-ink/80">{current.hint}</p>
             {current.shortcut &&
               (current.shortcut.external ? (
                 <a
                   href={current.shortcut.href}
-                  className="mt-3 inline-block text-[15px] font-semibold text-ink underline decoration-gold decoration-[3px] underline-offset-[6px] hover:decoration-ink"
+                  className="mt-3 inline-block text-[0.9375rem] font-semibold text-ink underline decoration-gold decoration-[3px] underline-offset-[6px] hover:decoration-ink"
                 >
                   {current.shortcut.label}
                 </a>
               ) : (
                 <Link
                   href={current.shortcut.href}
-                  className="mt-3 inline-block text-[15px] font-semibold text-ink underline decoration-gold decoration-[3px] underline-offset-[6px] hover:decoration-ink"
+                  className="mt-3 inline-block text-[0.9375rem] font-semibold text-ink underline decoration-gold decoration-[3px] underline-offset-[6px] hover:decoration-ink"
                 >
                   {current.shortcut.label}
                 </Link>
@@ -236,7 +236,7 @@ export default function ContactForm() {
         </p>
         <button
           type="submit"
-          className="group inline-flex items-center justify-center gap-2 rounded-full bg-gold px-8 py-4 text-[15px] font-bold text-ink transition-colors hover:bg-gold-soft"
+          className="group inline-flex items-center justify-center gap-2 rounded-full bg-gold px-8 py-4 text-[0.9375rem] font-bold text-ink transition-colors hover:bg-gold-soft"
         >
           Send message
           <svg aria-hidden="true" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1">

@@ -157,7 +157,7 @@ export default function Navbar() {
   }, [mobileOpen]);
 
   const linkBase =
-    "relative flex items-center gap-1 whitespace-nowrap rounded-full px-2.5 py-2 text-[14px] font-medium transition-colors 2xl:px-3 2xl:text-[15px]";
+    "relative flex items-center gap-1 whitespace-nowrap rounded-full px-2.5 py-2 text-sm font-medium transition-colors 2xl:px-3 2xl:text-[0.9375rem]";
 
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-paper/85 text-ink backdrop-blur-md">
@@ -169,8 +169,8 @@ export default function Navbar() {
           {/* alt is empty because the name is written right next to it */}
           <Image height={90} width={90} alt="" src="/logo/logo.png" priority className="h-12 w-12 object-contain" />
           <span className="leading-tight">
-            <span className="block text-[15px] font-bold tracking-[-0.01em] sm:text-[17px]">IT For Youth Ghana</span>
-            <span className="hidden text-[13px] text-ink/55 sm:block">Digital skills &amp; opportunity</span>
+            <span className="block text-[0.9375rem] font-bold tracking-[-0.01em] sm:text-[1.0625rem]">IT For Youth Ghana</span>
+            <span className="hidden text-[0.8125rem] text-ink/55 sm:block">Digital skills &amp; opportunity</span>
           </span>
         </Link>
 
@@ -179,14 +179,14 @@ export default function Navbar() {
           <Link
             href="/apply"
             onClick={closeAll}
-            className="hidden whitespace-nowrap rounded-full bg-ink px-5 py-2.5 text-[15px] font-semibold text-white transition-colors hover:bg-ink-soft sm:block"
+            className="hidden whitespace-nowrap rounded-full bg-ink px-5 py-2.5 text-[0.9375rem] font-semibold text-white transition-colors hover:bg-ink-soft sm:block"
           >
             Apply now
           </Link>
           <Link
             href="/donate"
             onClick={closeAll}
-            className="whitespace-nowrap rounded-full bg-gold px-4 py-2.5 text-[15px] font-semibold text-ink sm:px-5 transition-colors hover:bg-gold-soft"
+            className="whitespace-nowrap rounded-full bg-gold px-4 py-2.5 text-[0.9375rem] font-semibold text-ink sm:px-5 transition-colors hover:bg-gold-soft"
           >
             Donate
           </Link>
@@ -269,7 +269,7 @@ export default function Navbar() {
                             onClick={closeAll}
                             className="block rounded-xl px-4 py-3 transition-colors hover:bg-paper"
                           >
-                            <span className="block text-[15px] font-semibold">{child.label}</span>
+                            <span className="block text-[0.9375rem] font-semibold">{child.label}</span>
                             {child.description && (
                               <span className="mt-0.5 block text-sm text-ink/55">{child.description}</span>
                             )}
@@ -319,7 +319,7 @@ export default function Navbar() {
                               <Link
                                 href={child.href}
                                 onClick={closeAll}
-                                className="block rounded-lg px-2 py-2 text-[15px] text-ink/75 hover:bg-white hover:text-ink"
+                                className="block rounded-lg px-2 py-2 text-[0.9375rem] text-ink/75 hover:bg-white hover:text-ink"
                               >
                                 {child.label}
                               </Link>

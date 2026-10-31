@@ -11,7 +11,7 @@ const LEVELS = LEVEL_ORDER.filter((l) => l !== "all-levels" && COURSES.some((c) 
 const CATEGORIES = Array.from(new Set(COURSES.map((c) => c.category))).sort();
 
 const field =
-  "h-12 w-full rounded-full bg-white px-5 text-[15px] text-ink ring-1 ring-line transition-shadow focus:outline-none focus:ring-2 focus:ring-ink";
+  "h-12 w-full rounded-full bg-white px-5 text-[0.9375rem] text-ink ring-1 ring-line transition-shadow focus:outline-none focus:ring-2 focus:ring-ink";
 
 function Select({
   label,
@@ -104,7 +104,7 @@ export default function CourseCatalog() {
       </div>
 
       <div className="mt-6 flex min-h-10 items-center justify-between gap-4">
-        <p role="status" className="text-[15px] font-semibold text-ink">
+        <p role="status" className="text-[0.9375rem] font-semibold text-ink">
           {results.length} {results.length === 1 ? "course" : "courses"}
           {filtered ? (results.length === 1 ? " matches your filters" : " match your filters") : " available"}
         </p>
@@ -132,7 +132,7 @@ export default function CourseCatalog() {
         <div className="mt-6 rounded-[2rem] bg-white px-6 py-16 text-center ring-1 ring-line">
           <p className="text-xl font-bold text-ink">No courses match these filters.</p>
           <p className="mt-2 text-ink/65">Try a different search, or clear the filters to see every course.</p>
-          <button type="button" onClick={clear} className="mt-6 rounded-full bg-ink px-6 py-3 text-[15px] font-semibold text-white hover:bg-ink-soft">
+          <button type="button" onClick={clear} className="mt-6 rounded-full bg-ink px-6 py-3 text-[0.9375rem] font-semibold text-white hover:bg-ink-soft">
             Show all courses
           </button>
         </div>

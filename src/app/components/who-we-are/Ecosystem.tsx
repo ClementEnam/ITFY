@@ -67,8 +67,8 @@ export default function Ecosystem() {
             >
               <span className="text-sm font-semibold text-kente-green">{node.role}</span>
               <span className="mt-2 text-2xl font-bold tracking-[-0.02em] text-ink">{node.title}</span>
-              <span className="mt-3 flex-1 text-[15px] leading-relaxed text-ink/65">{node.text}</span>
-              <span className="mt-6 inline-flex items-center gap-2 text-[15px] font-semibold text-ink">
+              <span className="mt-3 flex-1 text-[0.9375rem] leading-relaxed text-ink/65">{node.text}</span>
+              <span className="mt-6 inline-flex items-center gap-2 text-[0.9375rem] font-semibold text-ink">
                 {node.cta}
                 <svg
                   aria-hidden="true"

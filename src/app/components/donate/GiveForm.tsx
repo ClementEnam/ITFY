@@ -48,7 +48,7 @@ export default function GiveForm() {
                     {on && <span className="h-2 w-2 rounded-full bg-gold" />}
                   </span>
                 </span>
-                <span className="mt-2 block text-[15px] leading-relaxed text-ink/65">{f.text}</span>
+                <span className="mt-2 block text-[0.9375rem] leading-relaxed text-ink/65">{f.text}</span>
               </label>
             );
           })}
@@ -96,7 +96,7 @@ export default function GiveForm() {
             }}
             aria-invalid={!!error}
             aria-describedby={error ? `${uid}-err` : undefined}
-            className="w-full rounded-full bg-paper py-3.5 pl-10 pr-5 text-[15px] font-semibold text-ink ring-1 ring-line focus:bg-white focus:outline-none focus:ring-2 focus:ring-ink"
+            className="w-full rounded-full bg-paper py-3.5 pl-10 pr-5 text-[0.9375rem] font-semibold text-ink ring-1 ring-line focus:bg-white focus:outline-none focus:ring-2 focus:ring-ink"
           />
         </div>
         {error && (
@@ -109,7 +109,7 @@ export default function GiveForm() {
       <button
         type="button"
         onClick={onContinue}
-        className="group mt-8 flex w-full items-center justify-center gap-2 rounded-full bg-gold px-8 py-4 text-[15px] font-bold text-ink transition-colors hover:bg-gold-soft"
+        className="group mt-8 flex w-full items-center justify-center gap-2 rounded-full bg-gold px-8 py-4 text-[0.9375rem] font-bold text-ink transition-colors hover:bg-gold-soft"
       >
         {value && value > 0 ? `Give ${CURRENCY}${value.toLocaleString("en-US")} to ${fundTitle}` : "Continue"}
         <svg aria-hidden="true" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1">

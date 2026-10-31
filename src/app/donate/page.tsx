@@ -68,18 +68,18 @@ export default function DonatePage() {
                 <p className="mt-5 max-w-[56ch] text-lg leading-relaxed text-white/80">{CAMPAIGN.text}</p>
                 <ul className="mt-8 grid gap-3 sm:grid-cols-3">
                   {CAMPAIGN.points.map((pt) => (
-                    <li key={pt} className="rounded-2xl bg-white/[0.08] p-5 text-[15px] leading-snug ring-1 ring-white/15 backdrop-blur-sm">
+                    <li key={pt} className="rounded-2xl bg-white/[0.08] p-5 text-[0.9375rem] leading-snug ring-1 ring-white/15 backdrop-blur-sm">
                       {pt}
                     </li>
                   ))}
                 </ul>
                 <div className="mt-auto flex flex-wrap gap-3 pt-10">
-                  <a href="#give" className="rounded-full bg-gold px-7 py-3.5 text-[15px] font-bold text-ink transition-colors hover:bg-gold-soft">
+                  <a href="#give" className="rounded-full bg-gold px-7 py-3.5 text-[0.9375rem] font-bold text-ink transition-colors hover:bg-gold-soft">
                     Donate now
                   </a>
                   <Link
                     href="/our-impact"
-                    className="group inline-flex items-center gap-2 rounded-full bg-white/10 px-7 py-3.5 text-[15px] font-semibold ring-1 ring-white/25 transition-colors hover:bg-white/15"
+                    className="group inline-flex items-center gap-2 rounded-full bg-white/10 px-7 py-3.5 text-[0.9375rem] font-semibold ring-1 ring-white/25 transition-colors hover:bg-white/15"
                   >
                     See how donations create impact
                     <Arrow />

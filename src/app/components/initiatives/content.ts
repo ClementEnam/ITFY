@@ -302,6 +302,109 @@ export const INITIATIVES: Initiative[] = [
       { role: "Partner", title: "Partner with us", text: "Mentor, fund or open doors for young founders.", cta: "See partnership routes", href: "/partner-with-us" },
     ],
   },
+  {
+    slug: "code-impact-challenge",
+    name: "Code Impact Challenge",
+    hero: {
+      lead: "Where technical skills meet real constraints: building, presenting and delivering under pressure.",
+      note: "A challenge-led programme that connects technical learning with real-world problem solving through time-bound, team-based projects.",
+      image: { src: IMG.group, alt: "Code Impact Challenge participants celebrating together" },
+      primary: { label: "Apply for Cohort 8", href: "/apply" },
+      secondary: { label: "Contact the team", href: "/contact" },
+    },
+    overview: {
+      title: "A focused pathway with clear outcomes",
+      paragraphs: [
+        "The Code Impact Challenge gives learners a public, mission-focused format to apply their skills, collaborate under pressure and deliver solutions to meaningful local problems. It transforms classroom learning into visible, community-relevant impact.",
+        "Code Impact Challenge turns technical learning into active problem-solving by giving young Ghanaians structured opportunities to build around real community needs, present under pressure and develop teamwork through challenge-based practice.",
+      ],
+      quote: "Strengthen problem-solving, collaboration and communication through purposeful, time-bound competition. Help learners practise applied building and public presentation, not only private classroom work. Create visible moments where communities, partners and stakeholders can see learner capability in action. Foster a culture of experimentation, iteration, feedback and professional delivery.",
+      image: { src: IMG.coding, alt: "Challenge participants working at computers" },
+    },
+    journey: {
+      title: "A programme journey that moves from access to confidence",
+      text: "Each initiative uses a clear process so participants and partners know what to expect from first contact to measurable outcomes.",
+      steps: [
+        { title: "Frame", text: "Teams receive challenge prompts tied to local, social or ecosystem needs that require practical digital thinking and creative solutions.", image: { src: IMG.group, alt: "Teams receiving their challenge brief" } },
+        { title: "Build", text: "Participants research, prototype, test and refine possible responses within a structured challenge window with clear milestones.", image: { src: IMG.coding, alt: "A team building their prototype" } },
+        { title: "Present", text: "Teams pitch their work to peers, judges and invited stakeholders with transparent criteria, deadlines and constructive feedback.", image: { src: IMG.graduation, alt: "Participants presenting to judges" } },
+        { title: "Reflect", text: "Feedback and debrief sessions help participants carry lessons forward into future projects, deeper programmes or venture work.", image: { src: IMG.group, alt: "A debrief session after the challenge" } },
+      ],
+    },
+    proof: {
+      title: "Proof that the model is translating into real opportunity",
+      text: "These indicators help show who the initiative is reaching, how consistently it is delivering and why it matters.",
+      stats: [
+        { value: "28", label: "Prototype concepts", text: "Ideas developed into early challenge-ready solutions with real-world relevance." },
+        { value: "11", label: "Judging mentors", text: "Partners and practitioners helping teams sharpen their thinking and delivery." },
+        { value: "4", label: "Winning teams", text: "Outstanding participant groups recognised for execution, impact and collaboration." },
+        { value: "88%", label: "Team completion", text: "A strong signal of engagement, accountability and collaborative follow-through." },
+      ],
+    },
+    audience: {
+      title: "Who it's for",
+      text: "This initiative is best for learners who already have some technical exposure and want a more applied, collaborative and time-bound format to stretch their skills and build visible portfolios.",
+      points: [
+        "Participants ready to practise teamwork, problem-solving and public presentation.",
+        "Learners who benefit from challenge deadlines, feedback loops and showcase moments.",
+        "Young builders interested in innovation, prototyping and community-relevant solutions.",
+      ],
+      eligibilityTitle: "Eligibility",
+      eligibility: "Works best for learners with some prior exposure to digital tools or technical learning pathways. Participants should be comfortable collaborating, presenting and iterating quickly under guidance. Teams may combine different strengths, including design, coding, research and storytelling.",
+    },
+    gallery: {
+      title: "Scenes from the classrooms, workshops and communities behind the work",
+      text: "See the people, learning environments and shared moments that bring this initiative to life.",
+      // TODO: swap in ITFY's real Code Impact Challenge photos
+      photos: [
+        { src: IMG.group, alt: "Learners during a challenge session", caption: "Learners working intensely during a challenge session." },
+        { src: IMG.coding, alt: "A team at their computers", caption: "A team collaborating during project development." },
+        { src: IMG.graduation, alt: "Participants presenting to an audience", caption: "Participants presenting their work at the showcase." },
+        { src: IMG.group, alt: "A participant giving a final presentation", caption: "A final demo presentation during the challenge format." },
+      ],
+    },
+    stories: {
+      title: "Stories that show what this initiative feels like from the inside",
+      // TODO: add the three people's photos from ITFY's page
+      items: [
+        { quote: "The challenge forced us to think clearly, move faster, and explain our decisions in a way we never had before.", name: "Saah J.", role: "Challenge participant" },
+        { quote: "It was one of the few experiences where you could see learners becoming more confident with every round.", name: "Amoako F.", role: "Volunteer judge" },
+        { quote: "The strongest teams were not always the most technical. They were the ones that understood the problem best.", name: "Agboku E.", role: "Mentor and reviewer" },
+      ],
+    },
+    partners: {
+      title: "Organisations that help this initiative reach further",
+      // TODO: partner logos and websites
+      items: [
+        { name: "GIZ", text: "Supports challenge-based approaches that connect youth skills to broader development and innovation themes." },
+        { name: "USAID", text: "Represents public-interest alignment and the value of locally-led, challenge-driven problem solving." },
+      ],
+    },
+    faq: {
+      title: "Answers to common questions about the initiative",
+      // TODO: ITFY's answers were collapsed in the screenshot; confirm these with the team
+      items: [
+        { q: "Is the challenge only for advanced coders?", a: "No. Some technical exposure helps, but teams mix strengths: design, research, storytelling and coding all matter. Understanding the problem well counts as much as technical depth." },
+        { q: "Do participants work alone or in teams?", a: "In teams. The challenge is built to practise collaboration, so participants plan, build and present together." },
+        { q: "What happens after the challenge ends?", a: "Teams take part in feedback and debrief sessions, then carry what they learned into future projects, deeper ITFY programmes or venture work through the Entrepreneurship Hub." },
+      ],
+    },
+    cta: {
+      title: "Ready to explore Code Impact Challenge?",
+      text: "Cohort 8 is now open. Join a 12-week, project-driven programme with mentorship and clear progression into work, further study or entrepreneurship. Scholarships and device support are available for learners who need them. 85% of graduates progress within six months.",
+      primary: { label: "Apply for Cohort 8", href: "/apply" },
+      secondary: { label: "Ask a question", href: "/contact" },
+    },
+    note: {
+      text: "Challenge teams are loaned machines from the IT For Youth Laptop Bank for the duration of the build.",
+      link: { label: "About the Laptop Bank", href: "/laptop-bank" },
+    },
+    explore: [
+      { role: "Impact", title: "Impact reports", text: "See how challenge-based learning fits into the wider mission and outcomes.", cta: "Read the reports", href: "/our-impact/reports" },
+      { role: "Apply", title: "Apply for training", text: "Explore the routes that can prepare learners for future challenge participation.", cta: "See courses", href: "/apply" },
+      { role: "Partner", title: "International development", text: "See how challenge-led work can connect with development partners.", cta: "Partner with us", href: "/partner-with-us" },
+    ],
+  },
 ];
 
 export const getInitiative = (slug: string) => INITIATIVES.find((i) => i.slug === slug);

@@ -28,13 +28,13 @@ export default function Campaign() {
             <div className="mt-auto flex flex-wrap items-center gap-x-7 gap-y-4 pt-10">
               <Link
                 href={CAMPAIGN.action.href}
-                className="rounded-full bg-gold px-7 py-3.5 text-[15px] font-semibold text-ink transition-colors hover:bg-gold-soft"
+                className="rounded-full bg-gold px-7 py-3.5 text-[0.9375rem] font-semibold text-ink transition-colors hover:bg-gold-soft"
               >
                 {CAMPAIGN.action.label}
               </Link>
               <Link
                 href={CAMPAIGN.secondary.href}
-                className="text-[15px] font-semibold text-ink underline decoration-gold decoration-[3px] underline-offset-[6px] hover:decoration-ink"
+                className="text-[0.9375rem] font-semibold text-ink underline decoration-gold decoration-[3px] underline-offset-[6px] hover:decoration-ink"
               >
                 {CAMPAIGN.secondary.label}
               </Link>
@@ -62,8 +62,8 @@ export default function Campaign() {
               <h2 className="mt-5 max-w-[20ch] text-[clamp(1.75rem,3vw,2.5rem)] font-extrabold leading-[1.1] tracking-[-0.03em]">
                 {GRADUATE.title}
               </h2>
-              <p className="mt-4 max-w-[48ch] text-[15px] leading-relaxed text-white/80">{GRADUATE.text}</p>
-              <span className="mt-6 inline-flex items-center gap-2 text-[15px] font-semibold">
+              <p className="mt-4 max-w-[48ch] text-[0.9375rem] leading-relaxed text-white/80">{GRADUATE.text}</p>
+              <span className="mt-6 inline-flex items-center gap-2 text-[0.9375rem] font-semibold">
                 {GRADUATE.action.label}
                 <Arrow />
               </span>

@@ -43,10 +43,10 @@ export default function WhoWeArePage() {
               {HERO.lead}
             </p>
             <div className="mt-10 flex animate-hero-rise flex-wrap gap-3 [animation-delay:300ms] motion-reduce:animate-none">
-              <Link href={HERO.actions[0].href} className="rounded-full bg-ink px-7 py-3.5 text-[15px] font-semibold text-white transition-colors hover:bg-ink-soft">
+              <Link href={HERO.actions[0].href} className="rounded-full bg-ink px-7 py-3.5 text-[0.9375rem] font-semibold text-white transition-colors hover:bg-ink-soft">
                 {HERO.actions[0].label}
               </Link>
-              <Link href={HERO.actions[1].href} className="rounded-full bg-white px-7 py-3.5 text-[15px] font-semibold text-ink ring-1 ring-line transition-colors hover:ring-ink">
+              <Link href={HERO.actions[1].href} className="rounded-full bg-white px-7 py-3.5 text-[0.9375rem] font-semibold text-ink ring-1 ring-line transition-colors hover:ring-ink">
                 {HERO.actions[1].label}
               </Link>
             </div>
@@ -102,10 +102,10 @@ export default function WhoWeArePage() {
               <li key={card.title}>
                 <Reveal delay={i * 120} className="h-full">
                   <article className="flex h-full flex-col rounded-[2rem] bg-paper p-8 ring-1 ring-line sm:p-9">
-                    <span className="grid h-11 w-11 place-items-center rounded-full bg-ink text-[15px] font-bold text-white">{i + 1}</span>
+                    <span className="grid h-11 w-11 place-items-center rounded-full bg-ink text-[0.9375rem] font-bold text-white">{i + 1}</span>
                     <h3 className="mt-6 text-2xl font-bold tracking-[-0.02em] text-ink">{card.title}</h3>
-                    <p className="mt-4 text-[15px] leading-relaxed text-ink/75">{card.text}</p>
-                    <p className="mt-6 border-l-[3px] border-gold pl-5 text-[15px] leading-relaxed text-ink/60">
+                    <p className="mt-4 text-[0.9375rem] leading-relaxed text-ink/75">{card.text}</p>
+                    <p className="mt-6 border-l-[3px] border-gold pl-5 text-[0.9375rem] leading-relaxed text-ink/60">
                       {card.note}
                     </p>
                   </article>
@@ -144,8 +144,8 @@ export default function WhoWeArePage() {
                 <Reveal key={card.title} delay={i * 120}>
                   <article className="rounded-[1.75rem] bg-white/[0.06] p-7 ring-1 ring-white/15 sm:p-9">
                     <h3 className="text-2xl font-bold tracking-[-0.02em]">{card.title}</h3>
-                    <p className="mt-4 text-[15px] leading-relaxed text-white/80 sm:text-base">{card.text}</p>
-                    <p className="mt-6 border-l-[3px] border-gold pl-5 text-[15px] leading-relaxed text-white/65">{card.note}</p>
+                    <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80 sm:text-base">{card.text}</p>
+                    <p className="mt-6 border-l-[3px] border-gold pl-5 text-[0.9375rem] leading-relaxed text-white/65">{card.note}</p>
                   </article>
                 </Reveal>
               ))}
@@ -165,7 +165,7 @@ export default function WhoWeArePage() {
           <Reveal className="grid gap-10 rounded-[2.5rem] bg-gold px-6 py-12 sm:px-12 sm:py-14 lg:grid-cols-[1.2fr_1fr] lg:items-center lg:px-16">
             <div>
               {/* navy bar instead of gold, so it shows on the gold card */}
-              <div className="flex items-center gap-3 text-[15px] font-semibold text-ink/70">
+              <div className="flex items-center gap-3 text-[0.9375rem] font-semibold text-ink/70">
                 <span aria-hidden="true" className="h-[3px] w-6 rounded-full bg-ink" />
                 {NEXT_MOVE.label}
               </div>
@@ -179,7 +179,7 @@ export default function WhoWeArePage() {
                 <li key={r.href}>
                   <Link
                     href={r.href}
-                    className="group flex items-center justify-between rounded-full bg-white px-7 py-4 text-[15px] font-semibold text-ink shadow-[0_16px_32px_-20px_rgba(16,32,74,0.5)] transition-colors hover:bg-ink hover:text-white"
+                    className="group flex items-center justify-between rounded-full bg-white px-7 py-4 text-[0.9375rem] font-semibold text-ink shadow-[0_16px_32px_-20px_rgba(16,32,74,0.5)] transition-colors hover:bg-ink hover:text-white"
                   >
                     {r.label}
                     <Arrow />

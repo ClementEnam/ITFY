@@ -60,7 +60,7 @@ export default function Principles() {
                       <li
                         key={point}
                         style={{ transitionDelay: expanded ? `${150 + p * 80}ms` : "0ms" }}
-                        className={`flex gap-3 rounded-2xl bg-white px-5 py-4 text-[15px] leading-snug text-ink ring-1 ring-line transition-[opacity,transform] duration-500 ${
+                        className={`flex gap-3 rounded-2xl bg-white px-5 py-4 text-[0.9375rem] leading-snug text-ink ring-1 ring-line transition-[opacity,transform] duration-500 ${
                           expanded ? "translate-x-0 opacity-100" : "-translate-x-3 opacity-0"
                         }`}
                       >

@@ -29,7 +29,7 @@ export default function DocToc({ items }: { items: { id: string; title: string }
               <a
                 href={`#${it.id}`}
                 aria-current={on ? "location" : undefined}
-                className={`-ml-[2px] flex gap-3 border-l-2 py-1.5 pl-4 text-[15px] transition-colors ${
+                className={`-ml-[2px] flex gap-3 border-l-2 py-1.5 pl-4 text-[0.9375rem] transition-colors ${
                   on ? "border-gold font-semibold text-ink" : "border-transparent text-ink/60 hover:text-ink"
                 }`}
               >

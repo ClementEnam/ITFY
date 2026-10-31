@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ENGAGE, EXPLORE, HERO, OPENINGS, ROLES } from "@/app/components/careers/content";
+import { ENGAGE, EXPLORE, HERO, OPENINGS, ROLES } from "../../components/careers/content";
 import { Arrow, container, h2, sectionSpace, SectionLabel } from "../../components/home/ui";
 import ExploreBand from "../../components/shared/ExploreBand";
 import NumbersBand from "../../components/shared/NumbersBand";
@@ -45,14 +45,14 @@ export default function CareersPage() {
             <p className="mt-8 max-w-[42ch] animate-hero-rise text-xl leading-relaxed text-ink/75 [animation-delay:150ms] motion-reduce:animate-none sm:text-2xl">
               {HERO.lead}
             </p>
-            <p className="mt-5 max-w-[56ch] animate-hero-rise text-[15px] leading-relaxed text-ink/60 [animation-delay:220ms] motion-reduce:animate-none">
+            <p className="mt-5 max-w-[56ch] animate-hero-rise text-[0.9375rem] leading-relaxed text-ink/60 [animation-delay:220ms] motion-reduce:animate-none">
               {HERO.note}
             </p>
             <div className="mt-10 flex animate-hero-rise flex-wrap gap-3 [animation-delay:300ms] motion-reduce:animate-none">
-              <a href={HERO.actions[0].href} className="rounded-full bg-ink px-7 py-3.5 text-[15px] font-semibold text-white transition-colors hover:bg-ink-soft">
+              <a href={HERO.actions[0].href} className="rounded-full bg-ink px-7 py-3.5 text-[0.9375rem] font-semibold text-white transition-colors hover:bg-ink-soft">
                 {HERO.actions[0].label}
               </a>
-              <Link href={HERO.actions[1].href} className="rounded-full bg-white px-7 py-3.5 text-[15px] font-semibold text-ink ring-1 ring-line transition-colors hover:ring-ink">
+              <Link href={HERO.actions[1].href} className="rounded-full bg-white px-7 py-3.5 text-[0.9375rem] font-semibold text-ink ring-1 ring-line transition-colors hover:ring-ink">
                 {HERO.actions[1].label}
               </Link>
             </div>
@@ -102,14 +102,14 @@ export default function CareersPage() {
                     >
                       <div>
                         <h3 className="text-2xl font-bold tracking-[-0.02em] text-ink">{role.title}</h3>
-                        <p className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-[15px] text-ink/60">
+                        <p className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-[0.9375rem] text-ink/60">
                           <span>{role.type}</span>
                           <span>{role.location}</span>
                           {role.closes && <span>Apply by {role.closes}</span>}
                         </p>
-                        <p className="mt-3 max-w-[70ch] text-[15px] leading-relaxed text-ink/70">{role.summary}</p>
+                        <p className="mt-3 max-w-[70ch] text-[0.9375rem] leading-relaxed text-ink/70">{role.summary}</p>
                       </div>
-                      <span className="inline-flex items-center gap-2 self-start rounded-full bg-ink px-6 py-3 text-[15px] font-semibold text-white md:self-center">
+                      <span className="inline-flex items-center gap-2 self-start rounded-full bg-ink px-6 py-3 text-[0.9375rem] font-semibold text-white md:self-center">
                         Apply for this role
                         <Arrow />
                       </span>
@@ -122,10 +122,10 @@ export default function CareersPage() {
             <Reveal className="mt-12">
               <div className="rounded-[2rem] bg-white px-6 py-14 text-center ring-1 ring-line sm:px-12">
                 <p className="text-2xl font-bold tracking-[-0.02em] text-ink">{OPENINGS.empty.title}</p>
-                <p className="mx-auto mt-3 max-w-[52ch] text-[15px] leading-relaxed text-ink/65">{OPENINGS.empty.text}</p>
+                <p className="mx-auto mt-3 max-w-[52ch] text-[0.9375rem] leading-relaxed text-ink/65">{OPENINGS.empty.text}</p>
                 <Link
                   href={OPENINGS.empty.action.href}
-                  className="mt-8 inline-block rounded-full bg-ink px-7 py-3.5 text-[15px] font-semibold text-white transition-colors hover:bg-ink-soft"
+                  className="mt-8 inline-block rounded-full bg-ink px-7 py-3.5 text-[0.9375rem] font-semibold text-white transition-colors hover:bg-ink-soft"
                 >
                   {OPENINGS.empty.action.label}
                 </Link>

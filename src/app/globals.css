@@ -40,6 +40,19 @@ html {
   scroll-padding-top: 6rem; /* anchor links clear the sticky navbar */
 }
 
+/* Phones: everything sized in rem (text, headings, spacing) shrinks by ~7%. */
+@media (max-width: 639px) {
+  html {
+    font-size: 93.75%; /* 15px instead of 16px */
+  }
+  /* keep form fields at 16px so iPhones don't zoom in when you tap them */
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
+
 @media (min-width: 1280px) {
   html {
     scroll-padding-top: 9.5rem; /* navbar is two rows on large screens */

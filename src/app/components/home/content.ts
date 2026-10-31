@@ -19,8 +19,9 @@ export const WHY = {
   quote: "IT For Youth Ghana exists to close that gap with training that is practical, inclusive and measured by what young people go on to do.",
   action: { label: "Discover training pathways", href: "/apply" },
   image: { src: IMG.coding, alt: "Young learners working at computers in an ITFY class" },
-  // Optional: a YouTube video ID (the part after watch?v=). With one, the photo gets a play button.
-  youtubeId: "https://youtu.be/20kVHaxoPYc?si=pZd7UBw8JktYx5FA",
+  // Optional: paste the YouTube link here, e.g. "https://www.youtube.com/watch?v=XXXXXXXXXXX".
+  // With one, the photo gets a play button. The photo shows until someone presses play.
+  youtubeId: "",
 };
 
 export const CHALLENGE = {

@@ -13,13 +13,13 @@ export default function PartnerTile({ partner }: { partner: Partner }) {
         )}
       </div>
       {partner.logo && <h3 className="mt-5 text-lg font-bold tracking-[-0.01em] text-ink">{partner.name}</h3>}
-      {partner.role && <p className="mt-2 flex-1 text-[15px] leading-relaxed text-ink/65">{partner.role}</p>}
+      {partner.role && <p className="mt-2 flex-1 text-[0.9375rem] leading-relaxed text-ink/65">{partner.role}</p>}
       {partner.url && (
         <a
           href={partner.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-5 self-start text-[15px] font-semibold text-ink underline decoration-gold decoration-2 underline-offset-4 hover:decoration-ink"
+          className="mt-5 self-start text-[0.9375rem] font-semibold text-ink underline decoration-gold decoration-2 underline-offset-4 hover:decoration-ink"
         >
           Visit {partner.name}
           <span className="sr-only"> (opens in a new tab)</span>

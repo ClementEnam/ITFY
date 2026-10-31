@@ -16,7 +16,7 @@ export default function Team() {
           </div>
           <Link
             href={TEAM.action.href}
-            className="group inline-flex shrink-0 items-center gap-2 self-start rounded-full bg-ink px-7 py-3.5 text-[15px] font-semibold text-white transition-colors hover:bg-ink-soft md:self-end"
+            className="group inline-flex shrink-0 items-center gap-2 self-start rounded-full bg-ink px-7 py-3.5 text-[0.9375rem] font-semibold text-white transition-colors hover:bg-ink-soft md:self-end"
           >
             {TEAM.action.label}
             <Arrow />
@@ -39,7 +39,7 @@ export default function Team() {
                     )}
                   </div>
                   <p className="mt-4 text-lg font-bold text-ink">{m.name}</p>
-                  <p className="text-[15px] text-ink/60">{m.role}</p>
+                  <p className="text-[0.9375rem] text-ink/60">{m.role}</p>
                 </Reveal>
               </li>
             ))}

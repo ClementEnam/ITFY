@@ -48,9 +48,9 @@ export default function Footer() {
               </span>
               <span className="text-xl font-bold tracking-[-0.01em]">IT For Youth Ghana</span>
             </Link>
-            <p className="mt-5 max-w-[36ch] text-[15px] leading-relaxed text-white/65">{FOOTER_TAGLINE}</p>
+            <p className="mt-5 max-w-[36ch] text-[0.9375rem] leading-relaxed text-white/65">{FOOTER_TAGLINE}</p>
 
-            <address className="mt-7 space-y-2 text-[15px] not-italic text-white/80">
+            <address className="mt-7 space-y-2 text-[0.9375rem] not-italic text-white/80">
               <p>{CONTACT.location}</p>
               <p>
                 <a href={`mailto:${CONTACT.email}`} className="transition-colors hover:text-gold">
@@ -85,14 +85,14 @@ export default function Footer() {
           <nav aria-label="Footer" className="grid grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-3 xl:grid-cols-5">
             {FOOTER_COLUMNS.map((col) => (
               <div key={col.title}>
-                <h3 className="text-[15px] font-bold text-white">{col.title}</h3>
+                <h3 className="text-[0.9375rem] font-bold text-white">{col.title}</h3>
                 <span aria-hidden="true" className="mt-3 block h-[3px] w-8 rounded-full bg-gold" />
                 <ul className="mt-5 space-y-3">
                   {col.links.map((link) => (
                     <li key={link.href}>
                       <Link
                         href={link.href}
-                        className="text-[15px] text-white/65 underline-offset-4 transition-colors hover:text-white hover:underline hover:decoration-gold"
+                        className="text-[0.9375rem] text-white/65 underline-offset-4 transition-colors hover:text-white hover:underline hover:decoration-gold"
                       >
                         {link.label}
                       </Link>

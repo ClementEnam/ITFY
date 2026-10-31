@@ -48,7 +48,7 @@ export function FeaturedPerson({ person }: { person: Person }) {
       <div className="self-center">
         <h3 className="text-3xl font-extrabold tracking-[-0.03em] text-ink sm:text-4xl">{person.name}</h3>
         <p className="mt-2 text-lg font-medium text-kente-green">{person.role}</p>
-        <p className="mt-6 max-w-[70ch] text-[15px] leading-[1.8] text-ink/75 sm:text-base">{person.bio}</p>
+        <p className="mt-6 max-w-[70ch] text-[0.9375rem] leading-[1.8] text-ink/75 sm:text-base">{person.bio}</p>
         <Contact person={person} />
       </div>
     </article>
@@ -63,10 +63,10 @@ export function PersonCard({ person }: { person: Person }) {
         <Avatar person={person} size="sm" />
         <div>
           <h3 className="text-xl font-bold tracking-[-0.02em] text-ink">{person.name}</h3>
-          <p className="text-[15px] text-ink/60">{person.role}</p>
+          <p className="text-[0.9375rem] text-ink/60">{person.role}</p>
         </div>
       </div>
-      <p className="mt-5 flex-1 text-[15px] leading-relaxed text-ink/70">{person.bio}</p>
+      <p className="mt-5 flex-1 text-[0.9375rem] leading-relaxed text-ink/70">{person.bio}</p>
       <Contact person={person} />
     </article>
   );

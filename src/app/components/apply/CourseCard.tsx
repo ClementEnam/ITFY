@@ -42,7 +42,7 @@ export default function CourseCard({ course }: { course: Course }) {
       <div className="flex flex-1 flex-col p-6">
         <p className="text-sm font-medium text-ink/55">{course.category}</p>
         <h3 className="mt-2 text-xl font-bold leading-snug tracking-[-0.02em] text-ink">{course.title}</h3>
-        <p className="mt-2 text-[15px] leading-relaxed text-ink/65">{course.description}</p>
+        <p className="mt-2 text-[0.9375rem] leading-relaxed text-ink/65">{course.description}</p>
 
         <dl className="mt-5 grid grid-cols-2 gap-3 text-sm">
           <div className="rounded-2xl bg-paper px-4 py-3">

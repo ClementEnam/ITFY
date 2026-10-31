@@ -9,7 +9,7 @@ const STORAGE_KEY = "itfy-offer-equipment";
 const STEPS = ["About your organisation", "About the equipment", "Logistics and consent"];
 
 const field =
-  "w-full rounded-2xl bg-paper px-5 py-3.5 text-[15px] text-ink ring-1 ring-line transition-shadow placeholder:text-ink/40 focus:bg-white focus:outline-none focus:ring-2 focus:ring-ink aria-[invalid=true]:ring-2 aria-[invalid=true]:ring-kente-red";
+  "w-full rounded-2xl bg-paper px-5 py-3.5 text-[0.9375rem] text-ink ring-1 ring-line transition-shadow placeholder:text-ink/40 focus:bg-white focus:outline-none focus:ring-2 focus:ring-ink aria-[invalid=true]:ring-2 aria-[invalid=true]:ring-kente-red";
 
 // Fields required on each step
 const REQUIRED: string[][] = [
@@ -173,10 +173,10 @@ export default function OfferForm() {
           </svg>
         </span>
         <h2 className="mt-6 text-3xl font-extrabold tracking-[-0.03em] text-ink">Your offer is ready to send</h2>
-        <p className="mt-3 max-w-[52ch] text-[15px] leading-relaxed text-ink/70">
+        <p className="mt-3 max-w-[52ch] text-[0.9375rem] leading-relaxed text-ink/70">
           Your email app should have opened with every answer filled in. Attach your asset list if you have one, then press send.
         </p>
-        <p className="mt-4 text-[15px] text-ink/70">
+        <p className="mt-4 text-[0.9375rem] text-ink/70">
           Nothing opened? Email{" "}
           <a href={`mailto:${CONTACT.email}`} className="font-semibold text-ink underline decoration-gold decoration-2 underline-offset-4">
             {CONTACT.email}
@@ -184,10 +184,10 @@ export default function OfferForm() {
           directly.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
-          <button type="button" onClick={() => setSent(false)} className="rounded-full bg-ink px-6 py-3 text-[15px] font-semibold text-white hover:bg-ink-soft">
+          <button type="button" onClick={() => setSent(false)} className="rounded-full bg-ink px-6 py-3 text-[0.9375rem] font-semibold text-white hover:bg-ink-soft">
             Back to my answers
           </button>
-          <button type="button" onClick={reset} className="rounded-full bg-white px-6 py-3 text-[15px] font-semibold text-ink ring-1 ring-line hover:ring-ink">
+          <button type="button" onClick={reset} className="rounded-full bg-white px-6 py-3 text-[0.9375rem] font-semibold text-ink ring-1 ring-line hover:ring-ink">
             Start a new offer
           </button>
         </div>
@@ -284,7 +284,7 @@ export default function OfferForm() {
               {fieldWrap("released", "Released from device management?", true, select("released", READINESS))}
               {fieldWrap("bios", "BIOS or EFI passwords cleared?", true, select("bios", READINESS))}
             </div>
-            <p className="rounded-2xl bg-gold/15 p-5 text-[15px] leading-relaxed text-ink/80">
+            <p className="rounded-2xl bg-gold/15 p-5 text-[0.9375rem] leading-relaxed text-ink/80">
               Not sure? That's fine. These are the two most common reasons a donation can't go ahead, so we'll check them with your IT team.{" "}
               <Link href="/laptop-bank/what-we-accept" className="font-semibold underline decoration-gold decoration-2 underline-offset-4">
                 See our minimums
@@ -319,7 +319,7 @@ export default function OfferForm() {
                   aria-invalid={!!errors.consent}
                   className="mt-0.5 h-5 w-5 shrink-0 accent-[var(--color-ink)]"
                 />
-                <span className="text-[15px] leading-relaxed text-ink/80">
+                <span className="text-[0.9375rem] leading-relaxed text-ink/80">
                   I agree to IT For Youth Ghana contacting me about this offer, and to my details being handled as described in the{" "}
                   <Link href="/laptop-bank/data-security" className="font-semibold text-ink underline decoration-gold decoration-2 underline-offset-4">
                     Laptop Bank data handling statement
@@ -336,7 +336,7 @@ export default function OfferForm() {
       <div className="mt-10 flex flex-col-reverse gap-4 border-t border-line pt-8 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-4">
           {step > 0 && (
-            <button type="button" onClick={() => setStep((s) => s - 1)} className="rounded-full px-5 py-3 text-[15px] font-semibold text-ink ring-1 ring-line hover:ring-ink">
+            <button type="button" onClick={() => setStep((s) => s - 1)} className="rounded-full px-5 py-3 text-[0.9375rem] font-semibold text-ink ring-1 ring-line hover:ring-ink">
               Back
             </button>
           )}
@@ -345,7 +345,7 @@ export default function OfferForm() {
         <button
           type="button"
           onClick={step < 2 ? next : submit}
-          className="rounded-full bg-gold px-8 py-4 text-[15px] font-bold text-ink transition-colors hover:bg-gold-soft"
+          className="rounded-full bg-gold px-8 py-4 text-[0.9375rem] font-bold text-ink transition-colors hover:bg-gold-soft"
         >
           {step < 2 ? "Continue" : "Send offer"}
         </button>

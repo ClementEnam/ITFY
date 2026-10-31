@@ -14,7 +14,7 @@ export default function Faq({ items }: { items: { q: string; a: string }[] }) {
               <span className="absolute h-4 w-[2px] rounded-full bg-ink transition-transform duration-300 group-open:scale-y-0" />
             </span>
           </summary>
-          <p className="max-w-[70ch] pb-7 text-[15px] leading-relaxed text-ink/70 sm:text-base">{item.a}</p>
+          <p className="max-w-[70ch] pb-7 text-[0.9375rem] leading-relaxed text-ink/70 sm:text-base">{item.a}</p>
         </details>
       ))}
     </div>

@@ -21,8 +21,8 @@ export default function ExploreBand({ label, title, cards }: { label: string; ti
                 >
                   <span className="text-sm font-semibold text-gold">{card.role}</span>
                   <span className="mt-2 text-xl font-bold">{card.title}</span>
-                  <span className="mt-2 flex-1 text-[15px] leading-relaxed text-white/65">{card.text}</span>
-                  <span className="mt-6 inline-flex items-center gap-2 text-[15px] font-semibold">
+                  <span className="mt-2 flex-1 text-[0.9375rem] leading-relaxed text-white/65">{card.text}</span>
+                  <span className="mt-6 inline-flex items-center gap-2 text-[0.9375rem] font-semibold">
                     {card.cta}
                     <Arrow />
                   </span>

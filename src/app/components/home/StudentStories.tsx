@@ -34,7 +34,7 @@ export default function StudentStories() {
               </blockquote>
               <figcaption className="mt-8">
                 <span className="block font-bold">{story.name}</span>
-                <span className="text-[15px] text-white/60">{story.role}</span>
+                <span className="text-[0.9375rem] text-white/60">{story.role}</span>
               </figcaption>
 
               {count > 1 && (

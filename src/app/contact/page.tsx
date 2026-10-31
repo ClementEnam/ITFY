@@ -154,7 +154,7 @@ export default function ContactPage() {
                     className="group flex h-full flex-col rounded-[1.5rem] bg-white p-6 ring-1 ring-line transition-[box-shadow,transform] duration-300 hover:-translate-y-1 hover:shadow-[0_24px_48px_-28px_rgba(16,32,74,0.45)]"
                   >
                     <span className="text-lg font-bold text-ink">{s.title}</span>
-                    <span className="mt-1 flex-1 text-[15px] text-ink/60">{s.text}</span>
+                    <span className="mt-1 flex-1 text-[0.9375rem] text-ink/60">{s.text}</span>
                     <span className="mt-5 grid h-10 w-10 place-items-center rounded-full bg-paper text-ink transition-colors group-hover:bg-gold">
                       <Arrow />
                     </span>

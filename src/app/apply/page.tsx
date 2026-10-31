@@ -27,7 +27,7 @@ const h2 = "text-[clamp(2rem,4.2vw,3.5rem)] font-extrabold leading-[1.05] tracki
 
 function SectionLabel({ children }: { children: string }) {
   return (
-    <div className="flex items-center gap-3 text-[15px] font-semibold text-ink/55">
+    <div className="flex items-center gap-3 text-[0.9375rem] font-semibold text-ink/55">
       <span aria-hidden="true" className="h-[3px] w-6 rounded-full bg-gold" />
       {children}
     </div>
@@ -65,14 +65,14 @@ export default function ApplyPage() {
             <p className="mt-7 max-w-[44ch] animate-hero-rise text-xl leading-relaxed text-ink/70 [animation-delay:150ms] motion-reduce:animate-none">
               {HERO.lead}
             </p>
-            <p className="mt-4 max-w-[52ch] animate-hero-rise text-[15px] leading-relaxed text-ink/60 [animation-delay:220ms] motion-reduce:animate-none">
+            <p className="mt-4 max-w-[52ch] animate-hero-rise text-[0.9375rem] leading-relaxed text-ink/60 [animation-delay:220ms] motion-reduce:animate-none">
               {HERO.note}
             </p>
             <div className="mt-10 flex animate-hero-rise flex-wrap gap-3 [animation-delay:300ms] motion-reduce:animate-none">
-              <a href="#courses" className="rounded-full bg-ink px-7 py-3.5 text-[15px] font-semibold text-white transition-colors hover:bg-ink-soft">
+              <a href="#courses" className="rounded-full bg-ink px-7 py-3.5 text-[0.9375rem] font-semibold text-white transition-colors hover:bg-ink-soft">
                 Browse courses
               </a>
-              <a href="#cohorts" className="rounded-full bg-white px-7 py-3.5 text-[15px] font-semibold text-ink ring-1 ring-line transition-colors hover:ring-ink">
+              <a href="#cohorts" className="rounded-full bg-white px-7 py-3.5 text-[0.9375rem] font-semibold text-ink ring-1 ring-line transition-colors hover:ring-ink">
                 See upcoming cohorts
               </a>
             </div>
@@ -99,7 +99,7 @@ export default function ApplyPage() {
                 <div className="flex flex-1 flex-col p-7 sm:p-10">
                   <h2 className="text-[clamp(1.75rem,3vw,2.5rem)] font-extrabold leading-[1.1] tracking-[-0.03em]">{g.title}</h2>
                   <p className={`mt-4 text-lg leading-relaxed ${i === 0 ? "text-ink/80" : "text-white/85"}`}>{g.intro}</p>
-                  <p className={`mt-5 border-l-[3px] border-gold pl-5 text-[15px] leading-relaxed ${i === 0 ? "text-ink/65" : "text-white/65"}`}>
+                  <p className={`mt-5 border-l-[3px] border-gold pl-5 text-[0.9375rem] leading-relaxed ${i === 0 ? "text-ink/65" : "text-white/65"}`}>
                     {g.body}
                   </p>
                 </div>
@@ -158,7 +158,7 @@ export default function ApplyPage() {
                     {/* details */}
                     <div>
                       <h3 className="text-2xl font-bold tracking-[-0.02em] text-ink">{c.title}</h3>
-                      <p className="mt-2 max-w-[60ch] text-[15px] leading-relaxed text-ink/70">{c.description}</p>
+                      <p className="mt-2 max-w-[60ch] text-[0.9375rem] leading-relaxed text-ink/70">{c.description}</p>
                       <dl className="mt-5 flex flex-wrap gap-x-8 gap-y-3 text-sm">
                         {[
                           ["Format", c.format],
@@ -181,7 +181,7 @@ export default function ApplyPage() {
                       {c.status === "open" && (
                         <a
                           href={APPLY_PORTAL_URL}
-                          className="inline-block rounded-full bg-ink px-6 py-3 text-[15px] font-semibold text-white transition-colors hover:bg-ink-soft lg:mt-3"
+                          className="inline-block rounded-full bg-ink px-6 py-3 text-[0.9375rem] font-semibold text-white transition-colors hover:bg-ink-soft lg:mt-3"
                         >
                           Apply now
                         </a>
@@ -227,8 +227,8 @@ export default function ApplyPage() {
                   >
                     <span className="text-sm font-semibold text-gold">{card.role}</span>
                     <span className="mt-2 text-xl font-bold">{card.title}</span>
-                    <span className="mt-2 flex-1 text-[15px] leading-relaxed text-white/65">{card.text}</span>
-                    <span className="mt-6 inline-flex items-center gap-2 text-[15px] font-semibold">
+                    <span className="mt-2 flex-1 text-[0.9375rem] leading-relaxed text-white/65">{card.text}</span>
+                    <span className="mt-6 inline-flex items-center gap-2 text-[0.9375rem] font-semibold">
                       {card.cta}
                       <svg aria-hidden="true" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1">
                         <path d="M7.3 15.7a1 1 0 0 1 0-1.4l4.3-4.3-4.3-4.3a1 1 0 1 1 1.4-1.4l5 5a1 1 0 0 1 0 1.4l-5 5a1 1 0 0 1-1.4 0z" />

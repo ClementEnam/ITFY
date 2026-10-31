@@ -6,7 +6,7 @@ export const h2 = "text-[clamp(2rem,4.2vw,3.5rem)] font-extrabold leading-[1.05]
 
 export function SectionLabel({ children, light = false }: { children: string; light?: boolean }) {
   return (
-    <div className={`flex items-center gap-3 text-[15px] font-semibold ${light ? "text-white/70" : "text-ink/55"}`}>
+    <div className={`flex items-center gap-3 text-[0.9375rem] font-semibold ${light ? "text-white/70" : "text-ink/55"}`}>
       <span aria-hidden="true" className="h-[3px] w-6 rounded-full bg-gold" />
       {children}
     </div>

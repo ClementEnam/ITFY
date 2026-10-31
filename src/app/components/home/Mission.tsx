@@ -16,7 +16,7 @@ export default function Mission() {
             <p className="mt-6 max-w-[52ch] text-lg leading-relaxed text-ink/70">{MISSION.text}</p>
             <Link
               href={MISSION.action.href}
-              className="mt-9 inline-block rounded-full bg-ink px-7 py-3.5 text-[15px] font-semibold text-white transition-colors hover:bg-ink-soft"
+              className="mt-9 inline-block rounded-full bg-ink px-7 py-3.5 text-[0.9375rem] font-semibold text-white transition-colors hover:bg-ink-soft"
             >
               {MISSION.action.label}
             </Link>
@@ -38,7 +38,7 @@ export default function Mission() {
               <dt className="sr-only">{stat.label}</dt>
               <dd>
                 <CountUp value={stat.value} className="block text-4xl font-extrabold tracking-[-0.04em] text-ink sm:text-5xl" />
-                <span className="mt-2 block text-[15px] leading-snug text-ink/65">{stat.label}</span>
+                <span className="mt-2 block text-[0.9375rem] leading-snug text-ink/65">{stat.label}</span>
               </dd>
             </Reveal>
           ))}

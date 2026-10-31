@@ -46,14 +46,14 @@ export default function PartnersPage() {
             <p className="mt-8 max-w-[44ch] animate-hero-rise text-xl leading-relaxed text-ink/75 [animation-delay:150ms] motion-reduce:animate-none">
               {HERO.lead}
             </p>
-            <p className="mt-5 max-w-[56ch] animate-hero-rise text-[15px] leading-relaxed text-ink/60 [animation-delay:220ms] motion-reduce:animate-none">
+            <p className="mt-5 max-w-[56ch] animate-hero-rise text-[0.9375rem] leading-relaxed text-ink/60 [animation-delay:220ms] motion-reduce:animate-none">
               {HERO.note}
             </p>
             <div className="mt-10 flex animate-hero-rise flex-wrap gap-3 [animation-delay:300ms] motion-reduce:animate-none">
-              <Link href={HERO.actions[0].href} className="rounded-full bg-ink px-7 py-3.5 text-[15px] font-semibold text-white transition-colors hover:bg-ink-soft">
+              <Link href={HERO.actions[0].href} className="rounded-full bg-ink px-7 py-3.5 text-[0.9375rem] font-semibold text-white transition-colors hover:bg-ink-soft">
                 {HERO.actions[0].label}
               </Link>
-              <Link href={HERO.actions[1].href} className="rounded-full bg-white px-7 py-3.5 text-[15px] font-semibold text-ink ring-1 ring-line transition-colors hover:ring-ink">
+              <Link href={HERO.actions[1].href} className="rounded-full bg-white px-7 py-3.5 text-[0.9375rem] font-semibold text-ink ring-1 ring-line transition-colors hover:ring-ink">
                 {HERO.actions[1].label}
               </Link>
             </div>

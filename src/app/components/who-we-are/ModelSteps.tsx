@@ -34,7 +34,7 @@ export default function ModelSteps() {
           } motion-reduce:transform-none motion-reduce:opacity-100`}
         >
           <span
-            className={`relative z-10 grid h-11 w-11 shrink-0 place-items-center rounded-full text-[15px] font-bold transition-colors duration-500 ${
+            className={`relative z-10 grid h-11 w-11 shrink-0 place-items-center rounded-full text-[0.9375rem] font-bold transition-colors duration-500 ${
               inView ? "bg-ink text-white" : "bg-white text-ink ring-1 ring-line"
             }`}
             style={{ transitionDelay: `${300 + i * (1200 / count)}ms` }}

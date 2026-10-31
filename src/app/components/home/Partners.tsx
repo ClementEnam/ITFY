@@ -30,13 +30,13 @@ export default function Partners() {
         <Reveal className="mt-12 flex flex-wrap justify-center gap-3">
           <Link
             href="/who-we-are/partners"
-            className="rounded-full bg-ink px-7 py-3.5 text-[15px] font-semibold text-white transition-colors hover:bg-ink-soft"
+            className="rounded-full bg-ink px-7 py-3.5 text-[0.9375rem] font-semibold text-white transition-colors hover:bg-ink-soft"
           >
             See all our partners
           </Link>
           <Link
             href={PARTNERS.action.href}
-            className="rounded-full bg-white px-7 py-3.5 text-[15px] font-semibold text-ink ring-1 ring-line transition-colors hover:ring-ink"
+            className="rounded-full bg-white px-7 py-3.5 text-[0.9375rem] font-semibold text-ink ring-1 ring-line transition-colors hover:ring-ink"
           >
             {PARTNERS.action.label}
           </Link>

@@ -44,7 +44,7 @@ export default function StepsLine({ steps }: { steps: Step[] }) {
           >
             <span
               style={{ transitionDelay: `${delay + 100}ms` }}
-              className={`relative z-10 grid h-11 w-11 shrink-0 place-items-center rounded-full text-[15px] font-bold transition-colors duration-500 ${
+              className={`relative z-10 grid h-11 w-11 shrink-0 place-items-center rounded-full text-[0.9375rem] font-bold transition-colors duration-500 ${
                 inView ? "bg-ink text-white" : "bg-white text-ink ring-1 ring-line"
               }`}
             >
@@ -52,7 +52,7 @@ export default function StepsLine({ steps }: { steps: Step[] }) {
             </span>
             <div className="min-w-0 flex-1 lg:mt-7">
               <h3 className="text-xl font-bold tracking-[-0.02em] text-ink">{step.title}</h3>
-              <p className="mt-2 max-w-[40ch] text-[15px] leading-relaxed text-ink/70">{step.text}</p>
+              <p className="mt-2 max-w-[40ch] text-[0.9375rem] leading-relaxed text-ink/70">{step.text}</p>
               {step.image && (
                 <div className="relative mt-5 aspect-[16/10] overflow-hidden rounded-2xl sm:max-w-md lg:max-w-none">
                   <Image

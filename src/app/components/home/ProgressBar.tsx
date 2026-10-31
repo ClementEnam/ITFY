@@ -13,7 +13,7 @@ export default function ProgressBar({ raised, goal }: { raised: number; goal: nu
       <div className="flex items-end justify-between gap-4">
         <p>
           <span className="block text-4xl font-extrabold tracking-[-0.04em] text-ink">{ghs(raised)}</span>
-          <span className="text-[15px] text-ink/60">raised of {ghs(goal)}</span>
+          <span className="text-[0.9375rem] text-ink/60">raised of {ghs(goal)}</span>
         </p>
         <span className="text-2xl font-bold text-kente-green">{pct}%</span>
       </div>

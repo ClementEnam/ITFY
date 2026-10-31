@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { CONTACT } from "../../components/footer/footerContent";
 import { container, SectionLabel } from "../../components/home/ui";
-
 import OfferForm from "../../components/laptop-bank/OfferForm";
 import { REPLY_TIME } from "../../components/laptop-bank/offer";
 
@@ -60,7 +59,7 @@ export default function OfferEquipmentPage() {
           <aside className="space-y-5 lg:pt-24">
             <div className="rounded-[1.75rem] bg-white p-7 ring-1 ring-line">
               <h2 className="text-lg font-bold text-ink">Would rather talk to someone?</h2>
-              <p className="mt-2 text-[15px] leading-relaxed text-ink/70">
+              <p className="mt-2 text-[0.9375rem] leading-relaxed text-ink/70">
                 Email{" "}
                 <a href={`mailto:${CONTACT.email}`} className="font-semibold text-ink underline decoration-gold decoration-2 underline-offset-4 [overflow-wrap:anywhere]">
                   {CONTACT.email}
@@ -70,7 +69,7 @@ export default function OfferEquipmentPage() {
             </div>
             <div className="rounded-[1.75rem] bg-gold/15 p-7">
               <h2 className="text-lg font-bold text-ink">Before you start</h2>
-              <ul className="mt-3 space-y-2 text-[15px] text-ink/75">
+              <ul className="mt-3 space-y-2 text-[0.9375rem] text-ink/75">
                 <li>
                   <Link href="/laptop-bank/what-we-accept" className="font-semibold text-ink underline decoration-gold decoration-2 underline-offset-4">
                     What we accept

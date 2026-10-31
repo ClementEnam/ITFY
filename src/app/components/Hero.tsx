@@ -80,7 +80,7 @@ export default function Hero() {
         <div>
           {/* "I want to [learn | support | hire]" */}
           <div className="flex flex-wrap items-center gap-3">
-            <span id="hero-audience-label" className="text-[15px] font-medium text-ink/60">
+            <span id="hero-audience-label" className="text-[0.9375rem] font-medium text-ink/60">
               I want to
             </span>
             <div
@@ -104,7 +104,7 @@ export default function Hero() {
                     aria-controls={`hero-panel-${a.id}`}
                     tabIndex={on ? 0 : -1}
                     onClick={() => setActive(i)}
-                    className={`rounded-full px-5 py-2 text-[15px] font-semibold transition-colors duration-200 ${
+                    className={`rounded-full px-5 py-2 text-[0.9375rem] font-semibold transition-colors duration-200 ${
                       on ? "bg-ink text-white" : "text-ink/65 hover:text-ink"
                     }`}
                   >
@@ -138,13 +138,13 @@ export default function Hero() {
                   <div className="mt-9 flex flex-wrap items-center gap-x-7 gap-y-4">
                     <Link
                       href={a.primary.href}
-                      className="rounded-full bg-ink px-7 py-3.5 text-[15px] font-semibold text-white transition-colors hover:bg-ink-soft"
+                      className="rounded-full bg-ink px-7 py-3.5 text-[0.9375rem] font-semibold text-white transition-colors hover:bg-ink-soft"
                     >
                       {a.primary.label}
                     </Link>
                     <Link
                       href={a.secondary.href}
-                      className="text-[15px] font-semibold text-ink underline decoration-gold decoration-[3px] underline-offset-[6px] transition-colors hover:decoration-ink"
+                      className="text-[0.9375rem] font-semibold text-ink underline decoration-gold decoration-[3px] underline-offset-[6px] transition-colors hover:decoration-ink"
                     >
                       {a.secondary.label}
                     </Link>

@@ -53,12 +53,12 @@ export default function NewsletterForm() {
           aria-invalid={status === "error"}
           aria-describedby="footer-email-status"
           placeholder="Your email address"
-          className="min-w-0 flex-1 rounded-full bg-white/10 px-5 py-3.5 text-[15px] text-white ring-1 ring-white/15 placeholder:text-white/45 focus:outline-none focus:ring-gold sm:bg-transparent sm:ring-0"
+          className="min-w-0 flex-1 rounded-full bg-white/10 px-5 py-3.5 text-[0.9375rem] text-white ring-1 ring-white/15 placeholder:text-white/45 focus:outline-none focus:ring-gold sm:bg-transparent sm:ring-0"
         />
         <button
           type="submit"
           disabled={status === "sending"}
-          className="rounded-full bg-gold px-7 py-3.5 text-[15px] font-semibold text-ink transition-colors hover:bg-gold-soft disabled:opacity-60"
+          className="rounded-full bg-gold px-7 py-3.5 text-[0.9375rem] font-semibold text-ink transition-colors hover:bg-gold-soft disabled:opacity-60"
         >
           {status === "sending" ? "Subscribing…" : "Subscribe"}
         </button>

@@ -17,5 +17,7 @@ export type Initiative = {
   partners: { title: string; items: { name: string; text: string; logo?: string; url?: string }[] };
   faq: { title: string; items: { q: string; a: string }[] };
   cta: { title: string; text: string; primary: LinkItem; secondary: LinkItem };
+  // Optional short note under the call to action, e.g. a link to the Laptop Bank.
+  note?: { text: string; link: LinkItem };
   explore: { role: string; title: string; text: string; cta: string; href: string }[];
 };

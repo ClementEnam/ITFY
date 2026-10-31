@@ -53,7 +53,7 @@ export default function LaptopBankPage() {
                     className="flex h-full flex-col rounded-2xl bg-white/[0.07] p-3 ring-1 ring-white/10 transition-colors hover:bg-white/[0.14]"
                   >
                     <span className="text-2xl font-extrabold text-gold">{i + 1}</span>
-                    <span className="mt-1 text-xs font-medium leading-snug text-white/80 sm:text-[13px]">{s.short}</span>
+                    <span className="mt-1 text-xs font-medium leading-snug text-white/80 sm:text-[0.8125rem]">{s.short}</span>
                   </a>
                 </li>
               ))}
@@ -89,8 +89,8 @@ export default function LaptopBankPage() {
                       {s.short}
                     </a>
                     {/* empty durations keep their column on tablet/desktop but take no space on phones */}
-                    <span className={`pl-11 text-[15px] text-ink/60 md:block md:pl-0 ${s.duration ? "" : "hidden"}`}>{s.duration}</span>
-                    <span className="flex gap-2 pl-11 text-[15px] text-ink/80 md:pl-0">
+                    <span className={`pl-11 text-[0.9375rem] text-ink/60 md:block md:pl-0 ${s.duration ? "" : "hidden"}`}>{s.duration}</span>
+                    <span className="flex gap-2 pl-11 text-[0.9375rem] text-ink/80 md:pl-0">
                       <DocIcon />
                       {s.receive}
                     </span>
@@ -115,7 +115,7 @@ export default function LaptopBankPage() {
               <li key={s.title} id={`stage-${i + 1}`} className="scroll-mt-40">
                 <details className="group rounded-[1.5rem] bg-white ring-1 ring-line open:ring-2 open:ring-gold">
                   <summary className="flex cursor-pointer list-none items-center gap-4 p-5 sm:p-6 [&::-webkit-details-marker]:hidden">
-                    <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-paper text-[15px] font-bold text-ink transition-colors group-open:bg-ink group-open:text-white">
+                    <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-paper text-[0.9375rem] font-bold text-ink transition-colors group-open:bg-ink group-open:text-white">
                       {i + 1}
                     </span>
                     <span className="flex-1 text-lg font-bold tracking-[-0.01em] text-ink sm:text-xl">{s.title}</span>
@@ -125,7 +125,7 @@ export default function LaptopBankPage() {
                     </span>
                   </summary>
                   <div className="px-5 pb-6 sm:px-6 sm:pl-[5.25rem]">
-                    <p className="max-w-[62ch] text-[15px] leading-relaxed text-ink/75 sm:text-base">{s.detail}</p>
+                    <p className="max-w-[62ch] text-[0.9375rem] leading-relaxed text-ink/75 sm:text-base">{s.detail}</p>
                     <dl className="mt-5 grid gap-3 sm:grid-cols-3">
                       <div className="rounded-2xl bg-paper p-4">
                         <dt className="text-xs font-semibold text-ink/55">Owned by</dt>
@@ -159,10 +159,10 @@ export default function LaptopBankPage() {
               <p className="mt-4 max-w-[48ch] text-lg leading-relaxed text-ink/80">{CTA.text}</p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
-              <Link href={CTA.primary.href} className="rounded-full bg-ink px-7 py-3.5 text-center text-[15px] font-semibold text-white transition-colors hover:bg-ink-soft">
+              <Link href={CTA.primary.href} className="rounded-full bg-ink px-7 py-3.5 text-center text-[0.9375rem] font-semibold text-white transition-colors hover:bg-ink-soft">
                 {CTA.primary.label}
               </Link>
-              <Link href={CTA.secondary.href} className="rounded-full bg-white px-7 py-3.5 text-center text-[15px] font-semibold text-ink transition-colors hover:bg-white/80">
+              <Link href={CTA.secondary.href} className="rounded-full bg-white px-7 py-3.5 text-center text-[0.9375rem] font-semibold text-ink transition-colors hover:bg-white/80">
                 {CTA.secondary.label}
               </Link>
             </div>

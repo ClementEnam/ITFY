@@ -15,7 +15,7 @@ export default function Programmes() {
           <p className="mt-6 max-w-[40ch] text-lg leading-relaxed text-ink/70">{PROGRAMMES.text}</p>
           <Link
             href="/what-we-do"
-            className="group mt-8 inline-flex items-center gap-2 text-[15px] font-semibold text-ink underline decoration-gold decoration-[3px] underline-offset-[6px] hover:decoration-ink"
+            className="group mt-8 inline-flex items-center gap-2 text-[0.9375rem] font-semibold text-ink underline decoration-gold decoration-[3px] underline-offset-[6px] hover:decoration-ink"
           >
             See all our work
             <Arrow />
@@ -41,8 +41,8 @@ export default function Programmes() {
                   </div>
                   <div className="flex flex-1 flex-col p-6">
                     <h3 className="text-xl font-bold tracking-[-0.02em] text-ink">{item.title}</h3>
-                    <p className="mt-2 flex-1 text-[15px] leading-relaxed text-ink/65">{item.text}</p>
-                    <span className="mt-5 inline-flex items-center gap-2 text-[15px] font-semibold text-ink">
+                    <p className="mt-2 flex-1 text-[0.9375rem] leading-relaxed text-ink/65">{item.text}</p>
+                    <span className="mt-5 inline-flex items-center gap-2 text-[0.9375rem] font-semibold text-ink">
                       Explore {item.title}
                       <Arrow />
                     </span>

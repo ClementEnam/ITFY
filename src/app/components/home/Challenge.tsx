@@ -23,7 +23,7 @@ export default function Challenge() {
               <dt className="sr-only">{stat.label}</dt>
               <dd>
                 <CountUp value={stat.value} className="block text-5xl font-extrabold tracking-[-0.04em] text-gold" />
-                <span className="mt-3 block max-w-[28ch] text-[15px] leading-snug text-white/70">{stat.label}</span>
+                <span className="mt-3 block max-w-[28ch] text-[0.9375rem] leading-snug text-white/70">{stat.label}</span>
               </dd>
             </Reveal>
           ))}
@@ -37,7 +37,7 @@ export default function Challenge() {
               <h4 className="text-lg font-semibold text-white/70">{divide.without.title}</h4>
               <ul className="mt-5 space-y-4">
                 {divide.without.points.map((p) => (
-                  <li key={p} className="flex gap-4 text-[15px] leading-relaxed text-white/65">
+                  <li key={p} className="flex gap-4 text-[0.9375rem] leading-relaxed text-white/65">
                     <span aria-hidden="true" className="mt-2.5 h-[2px] w-3 shrink-0 bg-white/40" />
                     {p}
                   </li>
@@ -48,7 +48,7 @@ export default function Challenge() {
               <h4 className="text-lg font-semibold">{divide.with.title}</h4>
               <ul className="mt-5 space-y-4">
                 {divide.with.points.map((p) => (
-                  <li key={p} className="flex gap-4 text-[15px] leading-relaxed text-ink/80">
+                  <li key={p} className="flex gap-4 text-[0.9375rem] leading-relaxed text-ink/80">
                     <svg aria-hidden="true" viewBox="0 0 20 20" fill="currentColor" className="mt-0.5 h-5 w-5 shrink-0 text-kente-green">
                       <path fillRule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.6l7.3-7.3a1 1 0 0 1 1.4 0z" clipRule="evenodd" />
                     </svg>
@@ -60,7 +60,7 @@ export default function Challenge() {
           </div>
           <Link
             href={CHALLENGE.action.href}
-            className="mt-10 inline-block rounded-full bg-gold px-7 py-3.5 text-[15px] font-semibold text-ink transition-colors hover:bg-gold-soft"
+            className="mt-10 inline-block rounded-full bg-gold px-7 py-3.5 text-[0.9375rem] font-semibold text-ink transition-colors hover:bg-gold-soft"
           >
             {CHALLENGE.action.label}
           </Link>

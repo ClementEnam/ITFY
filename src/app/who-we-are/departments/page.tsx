@@ -41,7 +41,7 @@ export default function DepartmentsPage() {
             </p>
             <a
               href="#departments"
-              className="mt-10 inline-block animate-hero-rise rounded-full bg-ink px-7 py-3.5 text-[15px] font-semibold text-white transition-colors [animation-delay:300ms] hover:bg-ink-soft motion-reduce:animate-none"
+              className="mt-10 inline-block animate-hero-rise rounded-full bg-ink px-7 py-3.5 text-[0.9375rem] font-semibold text-white transition-colors [animation-delay:300ms] hover:bg-ink-soft motion-reduce:animate-none"
             >
               See all {DEPARTMENTS.length} departments
             </a>
@@ -88,8 +88,8 @@ export default function DepartmentsPage() {
                     <div className="flex flex-1 flex-col p-6 sm:p-7">
                       <p className="text-sm font-semibold text-kente-green">{d.area}</p>
                       <h2 className="mt-2 text-xl font-bold leading-snug tracking-[-0.02em] text-ink sm:text-2xl">{d.name}</h2>
-                      <p className="mt-3 flex-1 text-[15px] leading-relaxed text-ink/70">{d.text}</p>
-                      <span className="mt-6 inline-flex items-center gap-2 text-[15px] font-semibold text-ink">
+                      <p className="mt-3 flex-1 text-[0.9375rem] leading-relaxed text-ink/70">{d.text}</p>
+                      <span className="mt-6 inline-flex items-center gap-2 text-[0.9375rem] font-semibold text-ink">
                         View department
                         <Arrow />
                       </span>
@@ -116,7 +116,7 @@ export default function DepartmentsPage() {
                 <Link
                   key={a.href}
                   href={a.href}
-                  className={`rounded-full px-7 py-3.5 text-center text-[15px] font-semibold transition-colors ${
+                  className={`rounded-full px-7 py-3.5 text-center text-[0.9375rem] font-semibold transition-colors ${
                     i === 0 ? "bg-gold text-ink hover:bg-gold-soft" : "bg-white/10 text-white ring-1 ring-white/20 hover:bg-white/15"
                   }`}
                 >

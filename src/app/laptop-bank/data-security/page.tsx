@@ -57,7 +57,7 @@ export default function DataSecurityPage() {
                   <p className="text-sm font-semibold text-ink/50">Section {i + 1}</p>
                   <h2 className="mt-2 text-[clamp(1.6rem,2.6vw,2.1rem)] font-extrabold tracking-[-0.025em] text-ink">{s.title}</h2>
                   {s.paragraphs.map((p) => (
-                    <p key={p} className="mt-4 text-[17px] leading-[1.75] text-ink/75">
+                    <p key={p} className="mt-4 text-[1.0625rem] leading-[1.75] text-ink/75">
                       {p}
                     </p>
                   ))}
@@ -101,10 +101,10 @@ export default function DataSecurityPage() {
           </Reveal>
 
           <Reveal className="mt-6 flex flex-col gap-3 sm:flex-row">
-            <Link href="/laptop-bank/donate" className="rounded-full bg-gold px-7 py-3.5 text-center text-[15px] font-bold text-ink transition-colors hover:bg-gold-soft">
+            <Link href="/laptop-bank/donate" className="rounded-full bg-gold px-7 py-3.5 text-center text-[0.9375rem] font-bold text-ink transition-colors hover:bg-gold-soft">
               Offer your equipment
             </Link>
-            <Link href="/laptop-bank/what-we-accept" className="rounded-full bg-white px-7 py-3.5 text-center text-[15px] font-semibold text-ink ring-1 ring-line transition-colors hover:ring-ink">
+            <Link href="/laptop-bank/what-we-accept" className="rounded-full bg-white px-7 py-3.5 text-center text-[0.9375rem] font-semibold text-ink ring-1 ring-line transition-colors hover:ring-ink">
               What we accept
             </Link>
           </Reveal>

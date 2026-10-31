@@ -20,7 +20,7 @@ export default function NumbersBand({ label, title, stats }: { label: string; ti
               <dd>
                 <CountUp value={s.value} className="block text-5xl font-extrabold tracking-[-0.04em] text-gold" />
                 <span className="mt-3 block text-lg font-semibold">{s.label}</span>
-                <span className="mt-1 block max-w-[30ch] text-[15px] leading-snug text-white/65">{s.text}</span>
+                <span className="mt-1 block max-w-[30ch] text-[0.9375rem] leading-snug text-white/65">{s.text}</span>
               </dd>
             </Reveal>
           ))}
