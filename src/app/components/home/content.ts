@@ -21,7 +21,7 @@ export const WHY = {
   image: { src: IMG.coding, alt: "Young learners working at computers in an ITFY class" },
   // Optional: paste the YouTube link here, e.g. "https://www.youtube.com/watch?v=XXXXXXXXXXX".
   // With one, the photo gets a play button. The photo shows until someone presses play.
-  youtubeId: "",
+  youtubeId: "https://youtu.be/20kVHaxoPYc?si=fFcXF8rGaB5M6Y95",
 };
 
 export const CHALLENGE = {
