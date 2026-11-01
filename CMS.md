@@ -42,13 +42,16 @@ Changes appear on the live site as soon as they're published.
    project. Vercel adds `BLOB_READ_WRITE_TOKEN` for you.
 3. **Environment variables** (Vercel › Settings › Environment Variables):
    `PAYLOAD_SECRET` (a new random string) and `DATABASE_URI` (the Atlas string).
-4. Redeploy. To fill the live database with the starting content, run the seed once from
-   your laptop with the live values:
+4. **Fill the live database before deploying.** Run the seed from your laptop with the live values
+   (copy `BLOB_READ_WRITE_TOKEN` from Vercel › Storage › your Blob store):
    ```
    # PowerShell
    $env:DATABASE_URI="mongodb+srv://..."; $env:BLOB_READ_WRITE_TOKEN="vercel_blob_rw_..."; npm run seed
    ```
-   Then open `https://your-site.vercel.app/admin` and create the admin account.
+   Close that terminal afterwards so your laptop goes back to the local database.
+5. **Redeploy** on Vercel. Then open `https://your-site.vercel.app/admin` and create the admin account.
+
+Deploys need `DATABASE_URI` set: without it the build has no database to read from and fails.
 
 ## For developers
 
