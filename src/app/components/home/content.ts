@@ -11,7 +11,13 @@ const IMG = {
   graduation: "/randomPictures/mainGraduationpic.jpg",
   juniorDev: "/people/benedicta.jpg",
   uxDev: "/people/danielle.jpg",
-  ictHead: "/people/mensah.jpg"
+  ictHead: "/people/mensah.jpg",
+  girlsInTech:"/randomPictures/group_girls.jpg",
+  entrepreneurshipHub:"/randomPictures/studentpresenting.jpg",
+  techConnect:"/randomPictures/children_holding_sign_in_streets.jpg",
+  communityOutreach:"/randomPictures/girlstaslkingUX.jpg",
+  techClubs:"/randomPictures/groupofgirlsentrance.jpg",
+  advocacy:"/randomPictures/studentpresentin.jpg"
 
 };
 
@@ -81,14 +87,14 @@ export const PROGRAMMES = {
   text: "Each initiative reaches young people at a different stage, from a first coding club to launching a business.",
   // TODO: replace descriptions with ITFY's wording and each initiative's own photo
   items: [
-    { title: "Girls in Tech", text: "Training, mentorship and community for young women starting out in technology.", href: "/what-we-do/girls-in-tech", image: IMG.group },
-    { title: "Youth Tech Academy", text: "Cohort-based digital skills training with real projects and deadlines.", href: "/what-we-do/youth-tech-academy", image: IMG.coding },
-    { title: "Entrepreneurship Hub", text: "Support for learners turning digital skills into businesses and freelance work.", href: "/what-we-do/entrepreneurship-hub", image: IMG.graduation },
-    { title: "Code Impact Challenge", text: "Learners build technology solutions to problems in their own communities.", href: "/what-we-do/code-impact-challenge", image: IMG.group },
-    { title: "Rural Tech Connect", text: "Bringing digital learning to young people outside Ghana's cities.", href: "/what-we-do/rural-tech-connect", image: IMG.coding },
-    { title: "Community Outreach", text: "Workshops and events that bring digital skills to schools and neighbourhoods.", href: "/what-we-do/community-outreach", image: IMG.graduation },
-    { title: "Advocacy", text: "Making the case for inclusive digital education across Ghana.", href: "/what-we-do/advocacy", image: IMG.coding },
-    { title: "Tech Clubs", text: "School clubs where students explore coding, design and problem solving.", href: "/what-we-do/tech-clubs", image: IMG.group },
+    { title: "Girls in Tech", text: "Mentorship, confidence-building, and technical training designed to increase the participation and leadership of young women in Ghana's digital economy", href: "/what-we-do/girls-in-tech", image: IMG.girlsInTech },
+    { title: "Youth Tech Academy", text: "Cohort-based digital skills training that takes young people from foundational skills to job-ready portfolios in 12 focused weeks", href: "/what-we-do/youth-tech-academy", image: IMG.coding },
+    { title: "Entrepreneurship Hub", text: "Practical support for young founder turning digital skills into ideas, prototypes, and early stage ventures that address local challenges", href: "/what-we-do/entrepreneurship-hub", image: IMG.entrepreneurshipHub },
+    { title: "Code Impact Challenge", text: "Time-bound, team-based challenges where participants build real solutions to problems that matter in their communities", href: "/what-we-do/code-impact-challenge", image: IMG.group },
+    { title: "Rural Tech Connect", text: "Extending training, devices, and opportunity to young people in communities beyond Accra through local school and community", href: "/what-we-do/rural-tech-connect", image: IMG.techConnect },
+    { title: "Community Outreach", text: "School visits, activations, and events that convert first exposure into sustained interest and clear next steps for thousands of students", href: "/what-we-do/community-outreach", image: IMG.communityOutreach },
+    { title: "Advocacy", text: "Thought leadership and coalition-building that elevates youth digital opportunity as a priority for institutions, policymakers, and funders.", href: "/what-we-do/advocacy", image: IMG.advocacy },
+    { title: "Tech Clubs", text: "Recurring, school-based clubs that provide students  with consistent practice, peer learning, and sustained skill development over time.", href: "/what-we-do/tech-clubs", image: IMG.techClubs },
   ],
 };
 
